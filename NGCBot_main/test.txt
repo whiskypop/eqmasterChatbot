@@ -1,0 +1,294 @@
+wxid_pkc3mdoj79aa22[wxid_pkc3mdoj79aa22]|1960712127967055095|2024-07-26 10:42:16|49|8650583fbce98d51fca675429dbb8b3a
+<msgsource>    <bizflag>0</bizflag>    <tmp_node>        <publisher-id />    </tmp_node>    <alnode>        <fr>4</fr>    </alnode>    <sec_msg_node>        <uuid>75b422aea99d9ff64d778502f21d65f0_</uuid>        <risk-file-flag />        <risk-file-md5-list />        <alnode>            <fr>1</fr>        </alnode>    </sec_msg_node>    <signature>V1_0cb8cm1t|v1_3gzX+zs5</signature></msgsource>
+<msg>
+        <appmsg appid="" sdkver="0">
+                <title>WHISKYpop 🍭和嘴儿的聊天记录</title>
+                <des>嘴儿: 又来了一只要饭小猫
+WHISKYpop 🍭: 好瘦啊
+WHISKYpop 🍭: 那你家的猫会不会和他打架
+WHISKYpop 🍭: 他练过拳击嘛</des>
+                <type>19</type>
+                <url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+                <appattach>
+                        <cdnthumbaeskey />
+                        <aeskey />
+                </appattach>
+                <recorditem><![CDATA[<recordinfo>
+        <info>嘴儿: 又来了一只要饭小猫
+WHISKYpop 🍭: 好瘦啊
+WHISKYpop 🍭: 那你家的猫会不会和他打架
+WHISKYpop 🍭: 他练过拳击嘛</info>
+        <datalist count="18">
+                <dataitem datatype="1" dataid="168c890f8b168ef7fd2934fc38b20371">
+                        <srcMsgLocalid>3062</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:31</sourcetime>
+                        <fromnewmsgid>1998023641969648002</fromnewmsgid>
+                        <srcMsgCreateTime>1721917878</srcMsgCreateTime>
+                        <datadesc>又来了一只要饭小猫</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="904d54cc0f89a720862813e7bd713510">
+                        <srcMsgLocalid>3063</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:31</sourcetime>
+                        <fromnewmsgid>4879306793676628292</fromnewmsgid>
+                        <srcMsgCreateTime>1721917913</srcMsgCreateTime>
+                        <datadesc>好瘦啊</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="a21d6e19ae63e3edbbf98d7e1f16b3ea">
+                        <srcMsgLocalid>3064</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>1140319778738635402</fromnewmsgid>
+                        <srcMsgCreateTime>1721917926</srcMsgCreateTime>
+                        <datadesc>那你家的猫会不会和他打架</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="1868ab4b97d06acddbd101015d588818">
+                        <srcMsgLocalid>3065</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>2007313375708104706</fromnewmsgid>
+                        <srcMsgCreateTime>1721917935</srcMsgCreateTime>
+                        <datadesc>他练过拳击嘛</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="44ca65c19f176de3604ea3c71d2622a1">
+                        <srcMsgLocalid>3066</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>1863427178836864666</fromnewmsgid>
+                        <srcMsgCreateTime>1721917943</srcMsgCreateTime>
+                        <datadesc>哈哈哈哈哈哈哈哈哈</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="946bfd8a58b3fd0c0e7920cfee953019">
+                        <srcMsgLocalid>3067</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>5175745548333334124</fromnewmsgid>
+                        <srcMsgCreateTime>1721917949</srcMsgCreateTime>
+                        <datadesc>我木有收养这只</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="dc7b4ef7b1810802bf9a18881f66ce41">
+                        <srcMsgLocalid>3068</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>6489102418069116498</fromnewmsgid>
+                        <srcMsgCreateTime>1721917960</srcMsgCreateTime>
+                        <datadesc>但它天天晚上在楼下等我</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="24b39c9f8fbd994c1273741bf40c9d58">
+                        <srcMsgLocalid>3069</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>5284613668297320653</fromnewmsgid>
+                        <srcMsgCreateTime>1721917961</srcMsgCreateTime>
+                        <datadesc>唉</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="2" dataid="9301a4aa8da62a383f13d280353cb016">
+                        <thumbsize>4551</thumbsize>
+                        <messageuuid>5a416d9030a515be245c00c92f4739a0_</messageuuid>
+                        <cdnthumburl>3052020100044b30490201000204973610f602030f52590204d66a872b020466a30b54042465393034363931392d383835392d343438352d613230612d3565653961336137333666360204019c20010201000400</cdnthumburl>
+                        <srcMsgLocalid>3070</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>2976832806719707194</fromnewmsgid>
+                        <thumbfiletype>1</thumbfiletype>
+                        <srcMsgCreateTime>1721917965</srcMsgCreateTime>
+                        <datafmt>jpg</datafmt>
+                        <thumbheight>120</thumbheight>
+                        <cdndatakey>077b8596ffe7350f1e2b96765513628e</cdndatakey>
+                        <datasize>325842</datasize>
+                        <thumbfullmd5>7d0586b2398be0b43f5b2f4b3c6d139b</thumbfullmd5>
+                        <filetype>1</filetype>
+                        <cdnthumbkey>0df4a6e7a5281af0eff70e4695f8798c</cdnthumbkey>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <thumbwidth>90</thumbwidth>
+                        <cdndataurl>3052020100044b30490201000204973610f602030f52590204d66a872b020466a30b54042437393437626334302d613033302d346634322d393864662d6339386566376462646337610204019c20010201000400</cdndataurl>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                        <fullmd5>726efbc583d342a17a05ecb80481aa00</fullmd5>
+                </dataitem>
+                <dataitem datatype="1" dataid="9d7e8f9610a07ebf6fa8030590ec8167">
+                        <srcMsgLocalid>3071</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:32</sourcetime>
+                        <fromnewmsgid>2174222318996822672</fromnewmsgid>
+                        <srcMsgCreateTime>1721917973</srcMsgCreateTime>
+                        <datadesc>好小</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="4" dataid="88d435a1e3e9af30038df1676d8a958c">
+                        <thumbsize>5877</thumbsize>
+                        <messageuuid>37010d42b1f8376d22f03fbeccc68909_</messageuuid>
+                        <cdnthumburl>3052020100044b30490201000204973610f602030f52590204d66a872b020466a30b55042433323065313761312d363961362d346462652d386139302d6639633839393135356439350204019c20010201000400</cdnthumburl>
+                        <srcMsgLocalid>3072</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:34</sourcetime>
+                        <fromnewmsgid>8745254935819502838</fromnewmsgid>
+                        <thumbfiletype>1</thumbfiletype>
+                        <srcMsgCreateTime>1721918045</srcMsgCreateTime>
+                        <datafmt>mp4</datafmt>
+                        <thumbheight>358</thumbheight>
+                        <cdndatakey>bd39cfaa31ceec514b46c318c03d6aa8</cdndatakey>
+                        <datasize>1271259</datasize>
+                        <thumbfullmd5>1aac4eafcd7828af353997626f27bd76</thumbfullmd5>
+                        <filetype>4</filetype>
+                        <cdnthumbkey>31578d25ae4d10bcbd3cf6b5ade4fbe6</cdnthumbkey>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <thumbwidth>200</thumbwidth>
+                        <cdndataurl>3052020100044b30490201000204973610f602030f52590204d66a872b020466a30b55042437336564323833392d363937302d343463662d623932642d3539313964643635323163370204011c08040201000400</cdndataurl>
+                        <duration>6</duration>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                        <fullmd5>7ab2ad40ac2eb752df2127088b435efe</fullmd5>
+                </dataitem>
+                <dataitem datatype="1" dataid="e57a3cb75a3177f1402db1279786fc6b">
+                        <srcMsgLocalid>3073</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:34</sourcetime>
+                        <fromnewmsgid>1805997680447315125</fromnewmsgid>
+                        <srcMsgCreateTime>1721918053</srcMsgCreateTime>
+                        <datadesc>我以前养的猫</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="284543c54c1d3a10b49d36a785121d45">
+                        <srcMsgLocalid>3074</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:34</sourcetime>
+                        <fromnewmsgid>2010227643430413495</fromnewmsgid>
+                        <srcMsgCreateTime>1721918058</srcMsgCreateTime>
+                        <datadesc>真会打拳击</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="10d4a6cb2c40f2d70456d7a14c690b35">
+                        <srcMsgLocalid>3075</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:35</sourcetime>
+                        <fromnewmsgid>1196241652337052258</fromnewmsgid>
+                        <srcMsgCreateTime>1721918156</srcMsgCreateTime>
+                        <datadesc>这么厉害！</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="3a549e1e79d2a7d4fa8701082624f304">
+                        <srcMsgLocalid>3076</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:36</sourcetime>
+                        <fromnewmsgid>460190343623502538</fromnewmsgid>
+                        <srcMsgCreateTime>1721918163</srcMsgCreateTime>
+                        <datadesc>那他是拳击猫欸</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="96bb73fe0cafa90041603eee796f4c6a">
+                        <srcMsgLocalid>3077</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:36</sourcetime>
+                        <fromnewmsgid>1606532558087614473</fromnewmsgid>
+                        <srcMsgCreateTime>1721918167</srcMsgCreateTime>
+                        <datadesc>哈哈哈哈哈哈</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="20934259a7dc7bbe8ebacae3c4720489">
+                        <srcMsgLocalid>3078</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:36</sourcetime>
+                        <fromnewmsgid>6762868615850273841</fromnewmsgid>
+                        <srcMsgCreateTime>1721918172</srcMsgCreateTime>
+                        <datadesc>boxingcat</datadesc>
+                        <dataitemsource>
+                                <hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername>
+                        </dataitemsource>
+                        <sourcename>WHISKYpop 🍭</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/U63TtTtkFgfyrXQdBv7GwETaEn4n0icIOUdZbVcbPNj2MxkCwIF5JTVbsib80tzd95ZFhU5mVxsg91tHq1Tky8v1yoBbZrYnic63WDXA4gWLkY9aYTwQhrreG8fEvhJFyOy/132</sourceheadurl>
+                </dataitem>
+                <dataitem datatype="1" dataid="a6f64affe56e387728592968647e515b">
+                        <messageuuid>f8993aa367175668fa3dae19901ed4ab_</messageuuid>
+                        <srcMsgLocalid>3079</srcMsgLocalid>
+                        <sourcetime>2024-7-25 22:37</sourcetime>
+                        <fromnewmsgid>6583582844294905804</fromnewmsgid>
+                        <srcMsgCreateTime>1721918249</srcMsgCreateTime>
+                        <refermsgitem>
+                                <content>真会打拳击</content>
+                                <svrid>2010227643430413495</svrid>
+                                <displayname>嘴儿</displayname>
+                                <type>1</type>
+                                <referdesc>嘴儿：真会打拳击</referdesc>
+                        </refermsgitem>
+                        <datadesc>是不是比你打得好
+---------------
+「嘴儿：真会打拳击」</datadesc>
+                        <dataitemsource>
+                                <hashusername>9284da754eda75b2c33faa1ced6de6764772c9aa397506c24597f5d0545c906f</hashusername>
+                        </dataitemsource>
+                        <sourcename>嘴儿</sourcename>
+                        <sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/wHlUsGS80MvoEM1RySBAibNsuGdmHMKWXKB6GCGWMOfbf97F3b6ecKM6bShq1V2fzJ627giaTu7H90Um30MAbM95ukiaibSZwDsjLf7EDZqeBBNXyg6vf3UxzZZ0o0IOPXup/132</sourceheadurl>
+                </dataitem>
+        </datalist>
+        <desc>嘴儿: 又来了一只要饭小猫
+WHISKYpop 🍭: 好瘦啊
+WHISKYpop 🍭: 那你家的猫会不会和他打架
+WHISKYpop 🍭: 他练过拳击嘛</desc>
+        <fromscene>2</fromscene>
+</recordinfo>
+]]></recorditem>
+                <percent>95</percent>
+        </appmsg>
+        <fromusername>wxid_pkc3mdoj79aa22</fromusername>
+        <scene>0</scene>
+        <appinfo>
+                <version>1</version>
+                <appname />
+        </appinfo>
+        <commenturl />
+</msg>
+
+C:/Users/v-haocjiang/Documents/WeChat Files/wxid_l3q5ajcxw53112/FileStorage/Cache/2024-07/9bf945e8d4168b99454cc48e71d61a51

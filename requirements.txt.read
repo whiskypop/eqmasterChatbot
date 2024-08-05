@@ -1,0 +1,5 @@
+build报错需要先安装c++工具包 Get it with "Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/
+需要在conda安装ffmpeg和uwsgi： 
+conda install -c conda-forge ffmpeg
+conda install -c conda-forge libiconv
+conda install -c conda-forge uwsgi
