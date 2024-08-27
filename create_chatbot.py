@@ -110,11 +110,8 @@ def create_eqmaster(username, verbose=False):
     """
     创建角色chatbot
     """
-    roleid, userid = get_id(rolename="default", username=username)
-
     # 自定义角色的载入
     chatbot = EQmaster(
-        userid=userid,
         username=username,
         llm = get_response,
         verbose=verbose,
@@ -128,9 +125,10 @@ if __name__ == "__main__":
     # 询问回复倾向
     # 根据场景分析和回复倾向，在prompt中细化，提取对应场景的参考数据
     # 给出高情商回复建议
+
     # 多agent 游戏机制（自己回复后，模型分析回复的质量，有没有改进点）（求助模型，模型给出建议）
     
-    username = "蒋浩辰"
+    username = "王佩佩"
     ai_chatbot = create_eqmaster(username=username, verbose=True)
 
     while True:
@@ -139,6 +137,14 @@ if __name__ == "__main__":
         if message[:5] == "对话记录：":
             response = ai_chatbot.get_response(chat_history=message)
         else:
-            response = ai_chatbot.get_response(query=message)
+             # 获取用户选择的回应选项
+            choice = input("\n请选择回应选项（1-4）：")
+            
+            # 根据选择生成最终回复
+            if choice.isdigit() and 1 <= int(choice) <= 4:
+                response = ai_chatbot.generate_final_response(int(choice))
+                print("\nEQmaster：", response)
+            else:
+                print("\n无效输入，请选择1到4之间的数字。")
         print("EQmaster：",response)
         print()

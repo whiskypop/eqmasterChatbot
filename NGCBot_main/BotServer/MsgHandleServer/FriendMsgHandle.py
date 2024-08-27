@@ -58,11 +58,13 @@ class FriendMsgHandle:
         content = msg.content.strip()
         sender = msg.sender
         msgType = msg.type
+        roomid = msg.roomid
 
         if msgType == 1:
+            print("收到消息")
             # Ai对话 Ai锁功能 对超管没用
             if self.aiLock or sender in self.Administrators:
-                Thread(target=self.getAiMsg, args=(content, sender, user_nick_name, isChatHistory)).start()
+                Thread(target=self.getAiMsg, args=(content, sender, roomid, isChatHistory)).start()
         # 好友自动同意处理 暂时没用 老版本微信有用
         if msgType == 37 and self.acceptFriendLock:
             Thread(target=self.acceptFriend, args=(msg,)).start()
@@ -222,14 +224,15 @@ class FriendMsgHandle:
         sendMsg = f'==== [爱心]来自超管的消息[爱心] ====\n\n{content.split(" ")[-1]}\n\n====== [爱心]NGCBot[爱心] ======'
         self.wcf.send_text(sendMsg, receiver=wxId)
 
-    def getAiMsg(self, content, sender, user_nick_name, isChatHistory=False):
+    def getAiMsg(self, content, sender, roomid, isChatHistory=False):
         """
         好友Ai对话
         :param content:
         :param sender:
         :return:
         """
-        aiMsg = self.Ad.get_eqmaster_Ai(content, user_nick_name, isChatHistory)
+        print("请求eqmaster回复...")
+        aiMsg = self.Ad.get_eqmaster_Ai(content, roomid, isChatHistory)
         if aiMsg:
             aiMsg_segment = aiMsg.split("\n\n")
             for i in aiMsg_segment:

@@ -53,6 +53,14 @@ def returnAiPicFolder():
     return returnCachePath() + '/aiPicCacheFolder'
 
 
+def returnAvatarFolder():
+    """
+    返回微信头像缓存文件夹
+    :return:
+    """
+    return returnCachePath() + '/weChatAvatarFolder'
+
+
 def clearCacheFolder():
     """
     清空缓存文件夹所有文件
@@ -65,6 +73,7 @@ def clearCacheFolder():
         file_lists += [returnFishCacheFolder() + '/' + file for file in os.listdir(returnFishCacheFolder())]
         file_lists += [returnGaoDeCacheFolder() + '/' + file for file in os.listdir(returnGaoDeCacheFolder())]
         file_lists += [returnAiPicFolder() + '/' + file for file in os.listdir(returnAiPicFolder())]
+        file_lists += [returnAvatarFolder() + '/' + file for file in os.listdir(returnAvatarFolder())]
         for rm_file in file_lists:
             os.remove(rm_file)
         return True
@@ -88,6 +97,8 @@ def initCacheFolder():
         os.mkdir(returnGaoDeCacheFolder())
     if not os.path.exists(returnAiPicFolder()):
         os.mkdir(returnAiPicFolder())
+    if not os.path.exists(returnAvatarFolder()):
+        os.mkdir(returnAvatarFolder())
         op(f'[+]: 初始化缓存文件夹成功!!!')
 
 

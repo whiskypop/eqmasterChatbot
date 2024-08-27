@@ -2,7 +2,7 @@ import requests
 from openai import AzureOpenAI
 
 # Configuration
-GPT4V_KEY = ""
+GPT4V_KEY = "691237de474e4086ba12b04b25d073b2"
 
 # IMAGE_PATH = ""
 # encoded_image = base64.b64encode(open(IMAGE_PATH, 'rb').read()).decode('ascii')
@@ -12,7 +12,7 @@ headers = {
     "api-key": GPT4V_KEY,
 }
 
-GPT4V_ENDPOINT = ""
+GPT4V_ENDPOINT = "https://opehcjiang.openai.azure.com/openai/deployments/hcjianggpt4o/chat/completions?api-version=2024-02-15-preview"
 
 
 def get_response( message ):

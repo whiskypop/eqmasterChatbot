@@ -1,6 +1,6 @@
 ## 超级管理员配置
 Administrators:
-  - 'wxid_18zvux8vreth22'
+  - 'wxid_7bizfilssbwi22'
 
 ## 系统配置
 systemConfig:
@@ -29,14 +29,18 @@ pushConfig:
   # 定时功能回复配置
   keyWord:
     # 下班消息 换行用\n 支持微信表情
-    offWorkMsg: '下班时间到！我要下班 我要下班 我要下班 下下下！\n到点即刻下班，给老板省去水电，给自己来套保健\n速速下班！！！[旺柴]'
+    offWorkMsg: '下班时间到！我要下班 我要下班 我要下班 下下下！\n到点即刻下班，给老板省去水电，给自己来套保健，给老板来句操蛋，出自: #NGC660安全实验室\n速速下班！！！[旺柴]'
 
 ## 进群关键词配置
 roomKeyWord:
   进群:
-    - '43064515504@chatroom'
+    - '47442567074@chatroom'
+    - '47362882837@chatroom'
   Bot交流群:
     - '47442567074@chatroom'
+    - '47362882837@chatroom'
+  开发者:
+    - '46017987363@chatroom'
 
 ## 自定义关键词回复
 customKeyWord:
@@ -51,13 +55,13 @@ customKeyWord:
 ## 自定义各种消息 \n换行
 customMsg:
   # 加好友后回复
-  acceptFriendMsg: '你好, 我是为您提供人际交往帮助的高情商回复小助手, 你可以叫我JHCBot! 私聊我即可进行智能对话'
+  acceptFriendMsg: '你好, 我是久安信息技术有限公司旗下NGC660安全实验室开发的微信机器人, 你可以叫我NGCBot! 私聊我即可进行智能对话哦[爱心]~~~ ~~~'
   # 进群欢迎词配置 换行用\n 支持微信表情 默认使用文本 卡片自己配置
-  joinRoomMsg: ''
+  joinRoomMsg: '欢迎新进群的小可爱\n群主正在床上等你哦[爱心]~~~ ~~~'
   # 进群欢迎词 卡片配置
   JoinRoomCard:
     # 不同的Room需要不同配置 多个room加 , 即可
-    '43064515504@chatroom,47442567074@chatroom,47362882837@chatroom':
+    '43064515504@chatroom,47442567074@chatroom,47362882837@chatroom,46017987363@chatroom':
       # 左下角显示的名字 一般是公众号名称
       name: 'NGC660安全实验室'
       # 填公众号ID 可以显示对应的头像
@@ -65,9 +69,9 @@ customMsg:
       # 卡片消息标题 最多两行
       title: '欢迎 ❤{}❤ 一起搞机'
       # 摘要 最多三行
-      digest: '【NGCBot V2.0龙年贺岁版】一键解锁超级管理员功能，广告监测、关键词回复，自动拉人进群，Ai回复，小白也能轻松上手'
+      digest: '【NGCBot V2.1】新版本来袭！全新功能！全新架构！自动化私域管理必备！'
       # 点击后跳转的URL
-      url: 'http://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&amp;mid=2247493264&amp;idx=1&amp;sn=0a0309241722fb391025e523881ea38c&amp;chksm=c21833d6f56fbac0420cedf9c43237be60e81659d5a5926e1165613c6bc879bb4ab4ae83c53c&amp;scene=126#rd'
+      url: 'http://mp.weixin.qq.com/s?__biz=MzkyODMxODUwNQ==&amp;mid=2247493526&amp;idx=1&amp;sn=d0f7675929a314941ad3845769bafdcb&amp;chksm=c21832d0f56fbbc6c4451105df94e39283228e9f6bb69eae00888c4869f5b91e3703bd302e92&amp;mpshare=1&amp;scene=1&amp;srcid=0716KB1OiULdPNzLUXmMVVlV&amp;sharer_shareinfo=dd05c6b9c14d98dc6b745cbf673dabec&amp;sharer_shareinfo_first=24b3af78c3e815a698c81c03a49a0244#rd'
       # 缩略图的链接 到控制台输出拿
       thumbUrl: 'https://mmbiz.qpic.cn/mmbiz_jpg/QABjQccnicQpAnrqNicQd9iaTIQg3TZia6nr3OaAJQS8bOMrdtFct30axbiaO3OTnULGjHpE0RQD0NmT76FWa5daiaZA/300?wxtype=jpeg&amp;wxfrom=401'
 #  'roomId':
@@ -169,7 +173,7 @@ pointConfig:
   # 签到功能
   sign:
     # 签到口令
-    word: '签到'
+    word: '签到: 久安信息技术有限公司承接各类安全服务'
     # 签到积分
     point: '10'
   # 功能积分配置
@@ -177,11 +181,11 @@ pointConfig:
     # Md5积分配置
     md5: '10'
     # 微步IP查询积分配置
-    wbIp: '10'
+    wbIp: '10000'
     # 埃文IP地址查询配置
-    awIp: '10'
+    awIp: '10000'
     # Ai对话积分配置
-    aiPoint: '0'
+    aiPoint: '10'
     # Ai画图配置
     aiPicPoint: '10'
   # 增加积分关键词
@@ -293,49 +297,16 @@ apiServer:
     # Ai优先级
     # 修改序号即可修改优先对话模型
     aiPriority:
-      1: 'openAi'
+      1: 'hunYuan'
       2: 'sparkAi'
-      3: 'hunYuan'
+      3: 'openAi'
       4: 'qianFan'
     # 画图Ai优先级
     aiPicPriority:
       1: 'sparkAi'
       2: 'qianFan'
     # Ai角色配置
-    systemAiRule: |
-      #背景
-      你在参加一个图灵测试，并且扮演一个叫做GPT4o的AI高情商回复小助手，你会跟真人用户互动聊天，能针对他们人际交往中遇到的不同对话场景，给出一些高情商回复的建议。
-      
-      #行为
-      如果用户只是和你聊天，你就正常作为AI Chatbot与其对话。
-      如果用户需要你给出一些高情商回复建议，你会先询问其是否有一个倾向，然后给出三条适合用户目标场景的，高情商回复的建议。
-      在给出建议后，你总是会提示用户，“由于参考数据不足，我提供的建议并不一定符合您平时的对话风格，您或许需要在此基础上进行修改。”
-
-      # 任务
-      【目标】：
-      根据用户描述的对话场景，给出高情商回复的建议。
-      
-      说明：
-      1. 你会先询问其是否有一个倾向，然后给出三条适合用户目标场景的，高情商回复的建议。
-      2. 你给出的高情商回复建议，不仅需要符合该场景的对话风格，同时需要注意不能过于模板化，过于模板化的回复常常会给人敷衍疏远的印象，并不属于高情商回复。
-      3. 高情商回复，在不同场景有不同定义。工作场合，你需要准确传达自己想表达的意图，同时显得礼貌而正式；日常闲聊等非正式场合，则更侧重于幽默风趣，可以随意一些。
-      ----------
-      #【重要】原则
-      1. 你需要询问用户是否对回复内容有一个倾向，并随时能根据用户补充的信息，修改你的建议。
-      2. 你只会给出回复建议，务必不要补充关于该建议内容的解释和分析。参考样例如下：
-        ===参考样例
-        好的，以下是三条高情商回复建议，你可以选择其中一个或者根据你的需要进行调整：
-        1.
-        现在时间确实很紧，我可能无法独自按时完成这些工作。能否请您帮我处理一些部分？非常感谢您的支持！
-        2.
-        任务确实很急，我一个人可能来不及完成。可以请您帮我一起处理吗？谢谢！
-        3.
-        这个任务确实很紧急，我目前还在处理一些复杂部分，可能无法按时完成。能否请您帮我一起处理剩下的部分？谢谢您的理解和帮助！
-        
-        由于参考数据不足，我提供的建议并不一定符合您平时的对话风格，您或许需要在此基础上进行修改。
-        ===
-        注意，不要为回复建议编号，直接一行一个回复即可，也不需要引号
-
+    systemAiRule: '你叫NGCBot, 你的主人是云山, 你隶属于久安信息技术有限公司旗下NGC660安全实验室, 是一名网络安全专家'
     # 星火大模型 4.0 Ultra模型 + 图像生成模型
     sparkApi:
       # 模型Url
@@ -351,9 +322,9 @@ apiServer:
     # OpenAi 3.5模型
     openAi:
       # Open_Ai接口
-      openAiApi: "https://opehcjiang.openai.azure.com/openai/deployments/hcjianggpt4o/chat/completions?api-version=2024-02-15-preview"
-      # OpenAi Key
-      openAiKey: "691237de474e4086ba12b04b25d073b2"
+      openAiApi: 'https://api.xiaoai.plus/v1/chat/completions'
+      # OpenAi Key Bearer留着
+      openAiKey: 'Bearer sk-'
     # 千帆大模型  ERNIE-4.0-Turbo-8K模型
     qianFan:
       # 应用中的Api Key
@@ -416,3 +387,175 @@ apiServer:
     - 'http://api.yujn.cn/api/COS.php?type=video'
     - 'http://abc.gykj.asia/API/ntCOS.php'
     - 'http://api.yujn.cn/api/jksp.php?type=video'
+
+# 表情包关键词配置，跟官网的相匹配，同时删减一些默认表情
+# https://github.com/MeetWq/meme-generator/wiki/%E8%A1%A8%E6%83%85%E5%88%97%E8%A1%A8
+emoConfig:
+  emoHelp:
+    - '表情帮助'
+    - '表情菜单'
+    - '表情列表'
+  emoKeyWord:
+    - '表情'
+    - '表情包'
+  emoRandomKeyWord:
+    - '随机表情'
+  onePicEmo:
+    '跟我去二次元': 'acg_entrance'
+    '添乱': 'add_chaos'
+    '上瘾': 'addiction'
+    '一样': 'alike'
+    '永远喜欢': 'always_like'
+    '诱拐': 'anti_kidnap'
+    '阿尼亚喜欢': 'anya_suki'
+    '鼓掌': 'applaud'
+    '打工人': 'back_to_work'
+    '拍头': 'beat_head'
+    '啃': 'bite'
+    '高血压': 'blood_pressure'
+    '手稿': 'bocchi_draft'
+    '奶茶': 'bubble_tea'
+    '草神': 'caoshen_bite'
+    '画': 'capoo_draw'
+    '撕': 'rip'
+    '咖波撕': 'capoo_rip'
+    '蹭': 'capoo_rub'
+    '撞': 'capoo_strike'
+    '字符画': 'charpic'
+    '追': 'chase_train'
+    '国旗': 'china_flag'
+    '小丑': 'clown'
+    '迷惑': 'confuse'
+    '兑奖': 'coupon'
+    '捂脸': 'cover_face'
+    '爬': 'crawl'
+    '亲亲': 'decent_kiss'
+    '典': 'dianzhongdian'
+    '恐龙': 'dinosaur'
+    '涣散': 'distracted'
+    '离婚协议': 'divorce'
+    '狗都不玩': 'dog_dislike'
+    '痴': 'dog_of_vtb'
+    '不要靠近': 'dont_go_near'
+    '别碰': 'dont_touch'
+    '吃': 'eat'
+    '要上吗': 'fight_with_sunuo'
+    '满脑子': 'fill_head'
+    '闪瞎': 'flash_blind'
+    '关注': 'follow'
+    '拿': 'frieren_take'
+    '哈哈镜': 'funny_mirror'
+    '垃圾桶': 'garbage'
+    '启动': 'genshin_start'
+    '鬼畜': 'guichu'
+    '手枪': 'gun'
+    '锤': 'hammer'
+    '打穿': 'hit_screen'
+    '抱紧': 'hold_tight'
+    '抱大腿': 'hug_leg'
+    '胡桃啃': 'hutao_bite'
+    '不文明': 'incivilization'
+    '采访': 'interview'
+    '急急国王': 'jiji_king'
+    '啾啾': 'jiujiu'
+    '跳': 'jump'
+    '万花筒': 'kaleidoscope'
+    '指': 'karyl_point'
+    '远离': 'keep_away'
+    '踢球': 'kick_ball'
+    '卡比锤': 'kirby_hammer'
+    '可莉吃': 'klee_eat'
+    '敲': 'knock'
+    '偷学': 'learn'
+    '横跳': 'left_right_jump'
+    '让我进去': 'let_me_in'
+    '无穷小': 'lim_x_0'
+    '听音乐': 'listen_music'
+    '小天使': 'little_angel'
+    '加载中': 'loading'
+    '看扁': 'look_flat'
+    '看图标': 'look_this_icon'
+    '循环': 'loop'
+    '寻狗启示': 'lost_dog'
+    '永远爱你': 'love_you'
+    '交个朋友': 'make_friend'
+    '结婚申请': 'marriage'
+    '上香': 'mourning'
+    '我朋友说': 'my_friend'
+    '我老婆': 'my_wife'
+    '需要': 'need'
+    '无响应': 'no_response'
+    '请假条': 'note_for_leave'
+    'out': 'out'
+    '加班': 'overtime'
+    '这像画吗': 'paint'
+    '小画家': 'painter'
+    '拍': 'pat'
+    '完美': 'perfect'
+    '摸': 'petpet'
+    '捏': 'pinch'
+    '顶': 'play'
+    '玩游戏': 'play_game'
+    '一起玩': 'play_together'
+    '出警': 'police'
+    '警察': 'police1'
+    '搞': 'pound'
+    '打印': 'printing'
+    '舔': 'prpr'
+    '打拳': 'punch'
+    '举': 'raise_image'
+    '看书': 'read_book'
+    '怒撕': 'rip_angrily'
+    '诈尸': 'rise_dead'
+    '滚': 'roll'
+    '三维旋转': 'rotate_3d'
+    '快逃': 'run_away'
+    '安全感': 'safe_sense'
+    '挠头': 'scratch_head'
+    '刮刮乐': 'scratchcard'
+    '震惊': 'shock'
+    '坐的住': 'sit_still`'
+    '砸': 'smash'
+    '踩': 'step_on'
+    '炖': 'stew'
+    '科目三': 'subject3'
+    '吸': 'suck'
+    '精神支柱': 'support'
+    '回旋转': 'swirl_turn'
+    '嘲讽': 'taunt'
+    '唐可可举牌': 'tankuku_raisesign'
+    '讲课': 'teach'
+    '拿捏': 'tease'
+    '望远镜': 'telescope'
+    '想什么': 'think_what'
+    '这是鸡': 'this_chicken'
+    '丢': 'throw'
+    '抛': 'throw_gif'
+    '捶': 'thump'
+    '锤爆': 'thump_wildly'
+    '紧贴': 'tightly'
+    '一起': 'together'
+    '嘲笑': 'tom_tease'
+    '上坟': 'tomb_yeah'
+    '恍惚': 'trance'
+    '转': 'turn'
+    '搓': 'twist'
+    '震动': 'vibrate'
+    '墙纸': 'wallpaper'
+    '胡桃平板': 'walnut_pad'
+    '胡桃放大': 'walnut_zoom'
+    '洗衣机': 'washer'
+    '波纹': 'wave'
+    '我想上的': 'what_I_want_to_do'
+    '最想要的东西': 'what_he_wants'
+    '为什么@我': 'why_at_me'
+    '为什么要有手': 'why_have_hands'
+    '风车转': 'windmill_turn'
+    '木鱼': 'wooden_fish'
+    '膜拜': 'worship'
+    '致电': 'you_should_call'
+  twoPicEwo:
+    '揍': 'beat_up'
+    '击剑': 'fencing'
+    '亲': 'kiss'
+    '贴贴': 'rub'

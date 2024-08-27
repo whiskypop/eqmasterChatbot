@@ -5,73 +5,439 @@ from datetime import datetime
 from .utils import base64_to_float_array, base64_to_string
 import json
 
+
+
 workplace = """
-在职场上通过聊天软件与上级对话时，表现出高情商同样非常重要。以下是一些在聊天内容方面的注意点和要点：
-    用词谨慎：
-    使用礼貌和专业的语言，避免使用俚语或过于随意的表达。
-    确保语气友好但不失专业性。
-    简明扼要：
-    信息要清晰、简洁，不要绕圈子。
-    直接回答上级的问题，不要含糊其辞。
-    确认理解：
-    确保你理解了上级的意图，可以通过复述或确认性问题来验证。
-    避免误解，确保沟通清晰。
-    积极回应：
-    对上级的指示或建议表示认可和感谢。
-    在合适的情况下，提供你的观点或建议，但要注意方式。
-    保持专业：
-    避免在工作群聊中讨论私人话题，保持对话的专业性。
-    在适当的场合表达幽默，但不要过度。
-    正面表达：
-    尽量用正面的语言表达，即使在讨论问题或困难时，也要表现出解决问题的态度。
-    避免抱怨或负面情绪的表达。
-    提供解决方案：
-    当讨论问题时，尽量提供可行的解决方案，而不仅仅是指出问题。
-    表现出你的主动性和责任感。
-    尊重隐私：
-    不要在公共聊天中讨论敏感或机密信息，必要时可以转为私聊。
-    尊重对方的隐私和时间，不在非工作时间发送工作信息（除非紧急）。
-    使用表情符号：
-    适当使用表情符号可以增加对话的亲和力，但要避免过度使用，保持专业性。
-    注意表情符号的使用场合和频率，确保不会引起误解。
-通过以上这些注意点和要点，你可以在通过聊天软件与上级对话时表现出高情商，建立良好的沟通和信任关系。
+在职场上对话时，表现出高情商同样非常重要。以下是一些在聊天内容方面的注意点和要点：
+    体贴前言：对话开头加上体贴他人的前言，如“很抱歉打扰您”或“您在忙吗？”，能瞬间扭转他人印象，表现出关心、谦虚和善解人意。例如：
+    “不好意思，你在忙啊？不过得麻烦你去影印一下。”
+    
+    先说结论：在商业场合中，人们喜欢先听结论。按照“结论→理由→具体事例→结论→远景”的流程讲话，能使对方更容易理解和接受你的观点。例如：
+    晚辈：“带iPad到客户那里，生意很快就成交了！”（结论）
+    前辈：“啊，这样吗？为什么用iPad可以很快成交？”
+    晚辈：“因为当场就可以给对方看我们公司的网页。”（理由）
+    前辈：“看网页？”
+    晚辈：“是，特别是产品动画。昨天向客户展示公司网页上的产品动画，结果他们都赞不绝口地说：‘啊，这可真棒！’当场就签约了。”（具体事例）
+    前辈：“噢，真厉害。我是不是也来买台iPad？”
+    晚辈：“您不用靠iPad也肯定能拿到合约。您本来就是优秀的资深业务，还是众所期望的业界第一，对吧？”（结论与远景）
+    
+    电话和聊天礼仪：电话或聊天中需更加注意礼貌，开头20秒尤其重要。遵循以下四大要点：表示歉意、自报姓名、直接传达要事、询问是否方便继续。例如：
+    “冒昧打扰您，非常抱歉。”
+    “我是××公司的某某人。”
+    “为了下周午餐会议的事，打电话给您。”
+    “是否可占用您5分钟时间？”
+    
+    使用“当然”“的确”句型：顾及反对者心情，使用“的确”或“当然”来承认对方观点，表现出冷静和客观，增加自己意见被接受的概率。例如：
+    “的确，戒烟的难处我完全明白。我自己也是失败好几次，花了三年才戒掉。但是肺癌的风险已一再宣传，吸烟者更该下定决心戒掉才是啊！”
 """
+# Key Point 1 
+# 对话开头加上体贴他人的前言，更容易得到尊敬与帮助。
+#     主管要你帮忙影印，对你说：“你去影印一下！”或是讲：“不好意思，你在忙啊？不过得麻烦你去影印一下。”这两种说法哪个听起来比较顺耳？
+#     很多人都会选后者吧！原因就在后面那句有顾虑到下属临时被拜托做事的心情。若是不在乎下属感受的上司，恐怕是说不出“不好意思你在忙”这类关心的言辞的。
+#     把内心想法讲出来之前，添加一句关心对方的前言，能瞬间扭转给他人的印象。非但不会招致对方的反感，还会受人尊敬，并且认为你“善解人意”“十分谦虚”，也较能达到你的目的。
+#     能干的人、成功的人都是把关心他人的前言当成口头禅。以下介绍几句给各位——
+#     ①说出意见：“虽然我没有立场说这种话。”“我也常犯类似的错误。”“我明白你的心情。”“虽然看起来很狂妄……”“很是冒昧……”“身为晚辈……”“我也觉得过意不去。”
+#     ②请托：“给您添麻烦了。”“在您百忙之中……真不好意思。”“很抱歉……”“劳驾……”（请对方前来的情况）
+#     ③邀请：“如果时间许可……”“要是有兴趣的话……”
+#     ④拒绝：“很感谢您的好意。”“还有很多地方希望您能帮忙。”“您的好意我心领了。”“很荣幸能邀请我，不过……”
+#     ⑤提问：“很冒昧地请教一下……”“也许很难回答……”“若是方便，可否问一下……”
+#     ⑥解释、反省：“献丑了……”“不周的地方还有很多。”
+#     ⑦提醒、忠告：“虽然说得很严肃……”“也许是多管闲事。”
+#     ⑧请求教导：“我对某件事情不太清楚……”“请务必告诉我……”“为了日后派得上用场，请教教我。”“感谢指教。”
+# Key Point 2
+# 在商业场合里，人们喜欢先听结论。
+#     “一直聊得很起劲”和“看不到结论，拖泥带水地对话”完全是两码子事。特别在职场上，多余的话说太多，对方容易烦躁不安。
+#     简单明了的说话流程
+#     必须简洁地按照“结论→理由→具体事例→结论→远景”的流程讲话，才不会让对方反感。如果晚辈能像以下例句一样，先讲出结论，前辈也比较容易接话。
+#     晚辈：“带iPad到客户那里，生意很快就成交了！”（结论）
+#     前辈：“啊，这样吗？为什么用iPad可以很快成交？”
+#     晚辈：“因为当场就可以给对方看我们公司的网页。”（理由）
+#     前辈：“看网页？”
+#     晚辈：“是，特别是产品动画。昨天向客户展示公司网页上的产品动画，结果他们都赞不绝口地说：‘啊，这可真棒！’当场就签约了。”（具体事例）
+#     前辈：“噢，真厉害。我是不是也来买台iPad？”
+#     晚辈：“您不用靠iPad也肯定能拿到合约。您本来就是优秀的资深业务，还是众所期望的业界第一，对吧？”（结论与远景）
+#     发言时，只要遵守以上规则，不只能改善拖泥带水的说话方式，对方也会想听你说话。
+#     这种顺序是文章、报告等常用的陈述架构，也是商业人士较能接受的有条理的谈话方式。
+#     用“开头先说结论”的展开方式，不仅对方会产生兴趣，之后话题也能延续。而且最后再加上远景描述，让对方有想象未来的空间，使人按照你心中想法去展开行动的概率也较高。只要牢牢记住这个流程，你带来的说服力及影响力都会大幅提升。
+# Key Point 3
+# 电话或聊天软件里讲话必须比平常更加注意礼貌。
+#     “喂，您好。我是××旅行代理商的齐藤，已经收到您手机发过来的申请，票券会寄到贵公司噢。”工作忙到不可开交时，对方连“很冒昧打给您”的道歉话都没说，劈头就讲些业务事情，或许接到这通电话时，会有摔手机的念头，内心不禁想：“我在忙，别给我打这种没用的电话来。”
+#     为何接到这类电话会让人烦躁？因为对方不先询问接电话的人目前是否方便讲话，只一味地说自己的事，并没有为电话另一头的人着想。
+#     由此可知，如果要打电话给对方，需先考虑到“对方立场”，礼貌周到地谈话。
+#     电话中无法看见彼此表情，比起当面说话，算是难度相当高的沟通方式。明白这点之后，通话中就要留意对方的语气、语调，赢得他的信赖。特别是开头20秒很重要。我在工作上也常需要通过电话采访对方，在前20秒当中能否给人留下一个好印象，几乎可以说是决定对方肯否让我采访的关键。若无法利用这段时间使对方卸下心防，他很可能就断然拒绝受访。即便勉强答应了，也多半不愿说出内心真实想法，进而使采访窒碍难行。
+#     想要在讲电话的前20秒就给对方一个好印象，我整理出以下四大要点，并提供可学的相关例句——
+#     ①突然打电话给对方时，必须表示歉意→“冒昧打扰您，非常抱歉。”
+#     ②自报姓名说明自己是谁→“我是××公司的某某人。”
+#     ③直接了当传达要事→“为了下周午餐会议的事，打电话给您。”
+#     ④询问对方自己可否继续说下去→“是否可占用您5分钟时间？”
+#     以此种方式说话，能让人感受到你无比的诚意。如果对方回复说“现在很忙”，那么过段时间再重拨电话也无妨。如果一味按照自己的步调，只顾着说你想讲的事，小心！十之八九会令对方感到畏惧！
+# Key Point 4
+# 使用“当然”“的确”句型，顾及反对者心情，自己的意见被接受的概率也会大幅提升。
+#     当人们“强烈主张自己的意见”或“提出相反看法”时，不只最终演变成强迫别人接受，看对方的眼神跟说话语调也会呈现一副高高在上的模样。
+#     不过你越想坚持己见，越要冷静下来。高压态度容易引起对方反感，也就越难达到你的目的。
+#     很想提出自己的意见时，请想想这句话“内心火热，表现沉着”，是指当你要将内心热切的想法转化成言语时，必须保持冷静，并且向对方表示：“我不打算全盘否定其他人意见，也很明白你的心情。”这样能让人相信你的看法是冷静而客观的，自然也会容易被接受。
+#     想对外传达这份“冷静”的情绪时，就可以巧妙运用“当然……”跟“的确……”的句型。
+#     “肺癌的风险已一再宣传了，抽烟的人就该下定决心戒烟才是啊！”——突然说出这样咄咄逼人的话，很可能遭到对方驳斥：“多管闲事！”“要这么容易早戒了！”
+#     那么，假若在提出的意见上添加“的确”会如何呢？
+#     “的确，戒烟的难处我完全明白。我自己也是失败好几次，花了三年才戒掉。但是肺癌的风险已一再宣传，吸烟者更该下定决心戒掉才是啊！”
+#     光是运用“的确”句型，就可表现出“体谅对方想反驳的心情”，额外再附加“客观见解”时，更能获得吸烟者的理解和赞同。还会有人听完你的话后产生强烈的同感。
+#     想在工作中真正说服对方，或与人交涉希望能占上风，这类客观冷静的魔法句型就派得上用场了。
+
 daily = """
-在日常聊天时，通过聊天软件表现出高情商是建立良好人际关系的重要因素。以下是一些注意点和要点，可以帮助你在日常聊天中表现得更加高情商：
-    积极倾听：
-    展示出你在认真阅读朋友的信息，通过简短的回应或表情符号表示理解。
-    理解朋友的观点，即使你可能不同意，也要表现出你在认真考虑。
-    保持礼貌和尊重：
-    即使是随意的聊天，也要保持基本的礼貌和尊重。
-    避免使用可能引起误解或冒犯的词语和表情符号。
-    真诚和开放：
-    表现出你的真诚和开放，不要刻意隐瞒或虚伪。
-    分享一些你的真实感受和想法，增进彼此的了解。
-    幽默感：
-    适当使用幽默可以增加聊天的趣味性，但要注意分寸，避免让对方感到不适。
-    确保幽默是积极和友善的，不涉及敏感话题。
-    情绪控制：
-    即使在面对争议或不快时，也要保持冷静，不要在情绪激动时发送信息。
-    使用冷静和理性的语言，避免表现出愤怒或沮丧。
-    同理心：
-    设身处地为朋友着想，理解他们的感受和处境。
-    表现出你对朋友的关心和支持。
-    正面表达：
-    尽量用正面的语言表达，保持积极的态度。
-    避免抱怨或负面情绪的表达。
-    适当使用表情符号和GIF：
-    表情符号和GIF可以增加对话的亲和力和趣味性。
-    注意表情符号和GIF的使用场合和频率，确保不会引起误解。
-    给予适时的鼓励和支持：
-    当朋友遇到困难或心情不好时，给予适时的鼓励和支持。
-    表现出你对朋友的关心和理解。
-    尊重隐私和边界：
-    避免在公共聊天中讨论朋友的私人或敏感话题，尊重他们的隐私。
-通过以上这些注意点和要点，你可以在日常聊天中表现出高情商，同时保持随意和轻松的聊天风格，增进彼此的友谊和理解。
+在日常聊天时，通过聊天软件表现出高情商是建立良好人际关系的重要因素。以下是一些注意点和要点：
+    拓展话题：避免单一话题的对话，尝试通过询问详细信息或分享自己的经历来拓展话题。例如：
+    “你住在哪儿？”“我住在埼玉的越谷。”
+    “要去越谷市，得搭哪种电车？”
+    “你说越谷吗？上个月我也去了越谷的Lake Town玩。”
+    
+    加一句话：回应尽可能别只回“是”或“不是”，在回话之后加上一句话，让对方能接续你的话。例如：
+    “嗯，是骑自行车来的。最近运动量不够，胖了6斤啊。”
+    “嗯，是骑自行车来的。因为天气太舒适了！”
+    
+    分享经历：以“自身经历”回应对方，较容易让人敞开心扉。例如：
+    A：“天气预报说午后可能有雷阵雨，我带了折叠伞出来。”
+    B：“说到雨伞，我觉得还是折叠伞比较好。我前几天带长伞出门，结果丢在电车里。”
+    
+    利用“5W1H”：就算对方不善言辞，利用“5W1H”引出话题。
+    ·Who（谁）·What（什么）·When（何时）·Where（在哪儿）·Why（为何）·How（如何）
+    例如：
+    “上回遭小偷了……”
+    “啊！遭小偷了？什么时候？”（When）
+    “上礼拜天。”
+    “被偷了什么？”（What）
+    “我的包包被偷了，里面有钱包，还有记事本。”
+
+    适时附和：在对方说话时，积极附和，表现出你有认真听。例如：
+    A：“将来有什么梦想吗？”
+    B：“希望去巴黎待一年！”
+    A：“嗯，嗯！那真不错啊！为什么选巴黎呢？”
+    
+    鹦鹉回话法：重复对方的话，表达理解。例如：
+    “这个假期你去哪儿了？”
+    “跟我老婆去了京都。”
+    “京都吗？”
+    
+    情绪共鸣：根据对方的情绪调整自己的语气和表情。例如：
+    “这个周末打算去迪士尼乐园。”（高兴）
+    “妈妈生病了，打算回老家探望。”（担心）
+
+    高明闲聊术：闲聊能卸除紧张，不给对方压力。避免问私人问题，选择“大方向”或“各种类型”话题。例如：
+    “星巴克一杯咖啡要价500日元以上，真是奢侈品。”
+    “喝杯办公室里的即溶咖啡就很满足，不过星巴克的气氛真的很好！”
+    
+    万用话题集：记住“工、天、季、健、新、艺、街、交”这八个话题。可快速开启对话。例如：
+    “你看起来很忙啊！”（工作）
+    “天气热到要中暑了！”（天气）
+    “周末要去赏樱花！”（季节）
+    
+    相似法则：通过聊天找出彼此的“相似点”，建立亲切感。例如：
+    “你学生时代喜欢过什么样的音乐？”
+    “我喜欢GRAY，我念大学的时候是他的疯狂粉丝。”
+    
+    食物话题：食物是最容易聊的话题，轻松搭上话。例如：
+    “难不成你能吃辣？”
+    “我最爱吃辣的！最近新宿有间卖麻辣拉面的店很好吃。”
+
+    对方专长：找出对方的嗜好或擅长的事物，让他说，聊再久也不累。例如：
+    “那台照相机很棒啊！是××牌的单反相机吗？”
+    “你知道啊？是最近刚出的新产品，不过操作很容易噢！”
+
+    情绪共鸣：根据对方的情绪调整自己的回应。例如：
+    “进公司才两年就当上店长，太厉害了吧！”
+    “谢谢你的夸奖，不过内部问题可是一大堆。”
+    “是噢，那岂不是很糟糕？不过跌到谷底也不算坏事，现在已经是最糟的情况，再来就只有进步的空间了。”
+
+    禁忌话题：避免谈“宗教”“政治”“种族”“思想”这四类话题。
+
+    聆听抱怨：听别人抱怨时不否定、不批判、不袒护对方所抱怨的对象。例如：
+    回几句“嗯嗯”，听过就算。
+
+    坦率自我：坦率地说出自己的个性和特点，能让对方感到轻松，减少防备。例如：
+    “虽然我看起来豪放不羁，但其实胆子很小，见到人多就紧张。”
+    
+    自我标签：给自己贴上具体的标签，方便对方记住你。例如：
+    “我每天早上会喝1升的巴西莓果汁。”
+    
+    简化专业术语：聊工作时，用简单易懂的语言，不要卖弄专业术语。例如：
+    “SEO是指搜索引擎优化。”
+    
+    直言缺点：坦率地承认自己的缺点，能让对方对你更有好感。例如：
+    “我没什么嗜好，所以无聊时喝点啤酒。”
+    
+    提供有用信息：提供对方可用的信息，让对方觉得跟你聊天有收获。例如：
+    “上××网站可以找到既便宜又高级的旅馆。”
+
+    说故事：把聊天当成讲故事，有画面更吸引人。例如：
+    “老板为了做出当年他在法国吃到的那种感动滋味，耗时五年才研制出这种极品甜点。”
+    
+    夸张比喻：锻炼幽默感，使用夸张比喻。例如：
+    “我的心情就像是被强迫去听哆啦A梦里的胖虎演唱会一样。”
+    
+    肯定叙述法：用肯定的方式表达意见，提升好感度。例如：
+    “是不是再另外想其他办法？相信一定会有好结果的！”
+    
+    糗事经验：主动分享自己的糗事，让人感到亲近。例如：
+    “昨天搭末班电车睡过头了，结果这趟旅行的目的地还是自己的家，真的是一点都不浪漫……”
+    
+    为对方着想：说话前先为对方设想，提升自己的魅力。例如：
+    “你没事吧？”“身体怎么了？”“你已经尽力了。”
+    
+    分享梦想：常跟人们说你的梦想，能引发共鸣和支持。例如：
+    “三年内我想去纽约开间画廊，上课就是为去纽约做准备。”
+
+    “假设问题”能套出“真心话”
+    提出假设性问题，如“如果你中了彩票，你会怎么用这笔钱？”能让对方分享更深层次的想法，了解他们的价值观。
+    
+    “没答案的问题”，活络现场气氛最好用
+    提出没有标准答案的问题，例如“怎样让富士山移动”，能引发大家的兴趣，带动聊天气氛。
+    
+    “封闭+开放”的询问，怎么聊都有话讲
+    先用封闭式问题确认对方兴趣，再用开放式问题深入对话。例如：“喜欢甜的东西吗？”然后问：“那最近有好吃的甜点吗？”
+    
+    适时帮对方“整理对话”，聊多久都不累
+    当对方说话混乱时，帮他整理重点，例如：“嗯，所以你现在做的这份工作与乐器有关？”这样能帮助对方继续讲下去。
+    
+    使用转向语如“那么”“说到这个”，能自然地改变话题，避免让对方觉得被打断。
+    
+    利用对方话中的关键词，自然地转移到新的话题。例如：“说到晚餐时喝酒，××你好像很能喝日本酒？”
+
+    聊能让对方感到喜欢、快乐、幸福的事物。例如，问新婚夫妻他们初识的情景，对方自然会滔滔不绝地说。例子：
+    A：“你真是个工作狂。”
+    B：“编辑杂志非常有趣，我从未厌倦过。”
+    A：“你到底为什么会想当杂志编辑呢？”
+    B：“大学时朋友找我进来这行，后来发现自己很有才华。”
+
+    男人喜欢能力被认可，女人喜欢被爱。例如，男性：“你真是个值得托付的人。”女性：“谢谢，有你真好。”
+
+    想要获得有用的资讯，可以刺激对方的“贡献心”。说明你的具体需求和目的，会让对方更愿意提供帮助。例子：
+    问：“银座有哪家意大利餐厅不错？”改为：“我三年没见到我妈了，她下周来看我，我想带她去吃她喜欢的意大利面，银座有哪家意大利餐厅不错？”
+    
+    提问时尽量范围小且具体，这样对方更容易给出实用的答案。例子：
+    问：“怎样做才能受欢迎？”改为：“当看到女孩子两手提着很重的东西，这时该对她说什么呢？”
+
+    当你不明白某个话题时，不要装懂，坦白表示不懂会让对方更愿意解释。例子：
+    对方提到“Offside”，你说：“啊？Offside？那是什么意思？”
+    
+    对于对方提供的信息，及时回应和表示感谢，能让对方更愿意继续提供帮助。例子：
+    “我昨天有去你说的那家按摩店，托你的福，酸痛和压力都消除了，还好问了你！”
 """
+
+# Key Point 1
+#     “你住在哪儿？”“我住在埼玉的越谷。”
+#     “这样啊……”
+#     “嗯……”
+#     许多人常担心自己像上面的谈话一样，跟人聊几句就无话可说了。单一话题的对话往往是一问一答，说个两句就结束了。聊天如同吹气球，一开始很重要。想将气球吹大，就得用力吹气，聊到顺利之前也需要一点努力。
+#     以上面的对话为例，当对方回“我住在埼玉的越谷”时，可以有以下几种接话方式——
+#     “要去越谷市，得搭哪种电车？”
+#     “你说越谷吗？上个月我也去了越谷。还是第一次去越谷有名的Lake Town玩。”
+#     与人谈话加入自己的经验就能拓展话题。或是请教对方：“越谷有名的是什么？”设法将问题丢回给对方。
+# Key Point 2
+# 回应尽可能别只回“是”或“不是”。在回话之后加上一句话，让对方能接续你的话。
+#     当对方说：“你今天是骑自行车来的吗？”你回：“是啊，骑自行车来的。”对方就会接话说：“这样啊……”
+#     若你只是复述对方的话当作回应，那对方也会给你像上述“这样啊……”的乏味接话，你之后就会慌张地想：“啊——没话好说了，接下来要问什么才好？”所以当你回应对方时，可像下面的例句一样，在你的回话之后再加上一句话——
+#     “嗯，是骑自行车来的。最近运动量不够，胖了6斤啊……”
+#     “嗯，是骑自行车来的。因为天气太舒适了！”
+#     “嗯，是骑自行车来的。能够快速从塞车的车阵旁通过让我有种快感！”
+#     “嗯，是骑自行车来的。因为汽车要检测，还在检测场里，所以才骑自行车来。”
+#     回答问题时，别只说“是”或“不是”。利用回话再加上一句话的方式，对方只要针对你所添加的那句话回答即可，不用再想其他话题，才不会造成对方不知如何回应你的窘境。对于不擅提问的人来说，即是“顺水推舟”的谈话：
+#     “最近运动量不够，胖了6斤啊！”→可以接减肥的话题。
+#     “因为天气太好了。”→可以接季节的话题。
+#     “快速从塞车的车阵旁通过，让我有种快感！”→可以接道路状况的话题。
+#     “其实是要检测车，把车留在检测场里了。”→可以接检测场的话题。
+#     “加一句话”的回话方式，是为对方着想，让他跟你说话没有压力。别人会觉得你“回话回得很好，跟你聊天很轻松”。自然就有高人气。
+# Key Point 3
+# 以“自身经历谈”回应对方，较容易让人敞开心扉。
+#     事先准备“炒热气氛”的话题回应对方，比如像“自身经历谈”。与人分享自己的经历就是利用心理学“自我揭露”（Self Disclosure）——经由告诉他人自身感受，或将别人原本不知道的关于自己的事说出来，进而引导对方“他人回馈”（Feedback Solicitation），经由别人分享，让我们也可了解原先不知晓的事情。不但能让自己敞开心扉，还能令对方轻易地卸下心防。
+#     A：“天气预报说午后可能有雷阵雨。以防万一，我带了折叠伞出来。”
+#     B：“说到雨伞，我觉得还是折叠伞比较好，放在包包里比较不容易弄丢！我前几天带长伞出门，不小心把伞丢在电车里，结果还是去买了把折叠伞。”
+#     A：“那我这钱花得有价值。我以前也是丢了一把刚买的长伞，从此以后就决定买伞只买折叠伞。”
+#     B以自己“将伞遗忘在电车”的经历连接A所提的“折叠伞”话题。对此，A也坦白地说出自身遭遇，因而两人都拥有共同的失败经历。如此一来，就能消除彼此内心的隔阂。
+#     举例来说，对方说：“我今天的晚餐是去一家牛丼店（牛丼饭是一道由牛小里脊、洋葱、米饭等材料制作成的美食。）吃的噢，虽然那家店很久没去了，偶尔吃一次还是觉得很美味。”听到这句话时，马上想想看自己有没有关于“牛丼”的经历，就可以回说：“是啊，其实我也很爱吃牛丼。每个礼拜一定要去吃一次，不然就会瘾头发作……”——养成利用自己的经历回应对方的习惯，别人就会觉得你很好亲近。
+#     要是实在想不出相关的自身经历，转述别人的经历也是一个方法。像是说：“提到牛丼，我有个朋友很厉害，他曾经外带牛丼在电车里吃！”
+#     若连朋友的经历也没有，就改变回应方式。你可以说：“听说煮牛肉加入奇异果，牛肉会变软！”举出“小常识”或“小道消息”来接话。简短说些自身有趣的经历，并留点时间给对方说话，就能引导大家一起聊天并且炒热气氛。
+# Key Point 4
+# 就算对方不善言辞，利用“5W1H”也能引出话题。
+#     连新闻记者也会掌握的六大重点：
+#     ·Who（谁）
+#     ·What（什么）
+#     ·When（何时）
+#     ·Where（在哪儿）
+#     ·Why（为何）
+#     ·How（如何）
+#     “5W1H”是“传递消息必备的六大要素”。常应用于新闻报道，借以让人容易理解新闻内容。一般的提问、接话中，这六大要素也同样适用。
+#     “上回遭小偷了……”
+#     “啊！遭小偷了？什么时候？”（When）
+#     “上礼拜天。”
+#     “被偷了什么？”（What）
+#     “我的包包被偷了，里面有钱包，还有记事本。”
+#     “啊！真是飞来横祸！在哪里被偷的？”（Where）
+#     “在品川车站的月台打电话时，我把包包放在长椅上。打完电话一看，长椅上的包包已经不见了……”
+#     对话重要之处就用“5W1H”提问，可以追溯出对方“曾做过的事”，借以得知事情的全貌。
+# 通过以上这些注意点和要点，你可以在日常聊天中表现出高情商，同时保持随意和轻松的聊天风格，增进彼此的友谊和理解。
+
 scene_data = {
-    "职场": workplace,
-    "日常聊天": daily,
+    "职场-安排工作": """
+        体贴前言：对话开头加上体贴他人的前言，如“很抱歉打扰您”或“您在忙吗？”，能瞬间扭转他人印象，表现出关心、谦虚和善解人意。例如：
+        “不好意思，你在忙啊？不过得麻烦你去影印一下。”
+""",
+    "职场-说服": """
+        使用“当然”“的确”句型：顾及反对者心情，使用“的确”或“当然”来承认对方观点，表现出冷静和客观，增加自己意见被接受的概率。例如：
+        “的确，戒烟的难处我完全明白。我自己也是失败好几次，花了三年才戒掉。但是肺癌的风险已一再宣传，吸烟者更该下定决心戒掉才是啊！”
+""",
+    "职场-通用": """
+            先说结论：在商业场合中，人们喜欢先听结论。按照“结论→理由→具体事例→结论→远景”的流程讲话，能使对方更容易理解和接受你的观点。例如：
+            晚辈：“带iPad到客户那里，生意很快就成交了！”（结论）
+            前辈：“啊，这样吗？为什么用iPad可以很快成交？”
+            晚辈：“因为当场就可以给对方看我们公司的网页。”（理由）
+            前辈：“看网页？”
+            晚辈：“是，特别是产品动画。昨天向客户展示公司网页上的产品动画，结果他们都赞不绝口地说：‘啊，这可真棒！’当场就签约了。”（具体事例）
+            前辈：“噢，真厉害。我是不是也来买台iPad？”
+            晚辈：“您不用靠iPad也肯定能拿到合约。您本来就是优秀的资深业务，还是众所期望的业界第一，对吧？”（结论与远景）
+            
+            电话和聊天礼仪：电话或聊天中需更加注意礼貌，开头20秒尤其重要。遵循以下四大要点：表示歉意、自报姓名、直接传达要事、询问是否方便继续。例如：
+            “冒昧打扰您，非常抱歉。”
+            “我是××公司的某某人。”
+            “为了下周午餐会议的事，打电话给您。”
+            “是否可占用您5分钟时间？”
+""",
+    "日常-打开话题/延续对话": """
+        适时附和：在对方说话时，积极附和，表现出你有认真听。例如：
+        A：“将来有什么梦想吗？”
+        B：“希望去巴黎待一年！”
+        A：“嗯，嗯！那真不错啊！为什么选巴黎呢？”
+        
+        鹦鹉回话法：重复对方的话，表达理解。例如：
+        “这个假期你去哪儿了？”
+        “跟我老婆去了京都。”
+        “京都吗？”
+
+        高明闲聊术：闲聊能卸除紧张，不给对方压力。避免问私人问题，选择“大方向”或“各种类型”话题。例如：
+        “星巴克一杯咖啡要价500日元以上，真是奢侈品。”
+        “喝杯办公室里的即溶咖啡就很满足，不过星巴克的气氛真的很好！”
+    
+        万用话题集：记住“工、天、季、健、新、艺、街、交”这八个话题。可快速开启对话。例如：
+        “你看起来很忙啊！”（工作）
+        “天气热到要中暑了！”（天气）
+        “周末要去赏樱花！”（季节）
+    
+        相似法则：通过聊天找出彼此的“相似点”，建立亲切感。例如：
+        “你学生时代喜欢过什么样的音乐？”
+        “我喜欢GRAY，我念大学的时候是他的疯狂粉丝。”
+        
+        食物话题：食物是最容易聊的话题，轻松搭上话。例如：
+        “难不成你能吃辣？”
+        “我最爱吃辣的！最近新宿有间卖麻辣拉面的店很好吃。”
+
+        对方专长：找出对方的嗜好或擅长的事物，让他说，聊再久也不累。例如：
+        “那台照相机很棒啊！是××牌的单反相机吗？”
+        “你知道啊？是最近刚出的新产品，不过操作很容易噢！”
+
+        情绪共鸣：根据对方的情绪调整自己的回应。例如：
+        “进公司才两年就当上店长，太厉害了吧！”
+        “谢谢你的夸奖，不过内部问题可是一大堆。”
+        “是噢，那岂不是很糟糕？不过跌到谷底也不算坏事，现在已经是最糟的情况，再来就只有进步的空间了。”
+
+        禁忌话题：避免谈“宗教”“政治”“种族”“思想”这四类话题。
+""",
+    "日常-展示同理心/引导话题": """
+        拓展话题：避免单一话题的对话，尝试通过询问详细信息或分享自己的经历来拓展话题。例如：
+        “你住在哪儿？”“我住在埼玉的越谷。”
+        “要去越谷市，得搭哪种电车？”
+        “你说越谷吗？上个月我也去了越谷的Lake Town玩。”
+        
+        加一句话：回应尽可能别只回“是”或“不是”，在回话之后加上一句话，让对方能接续你的话。例如：
+        “嗯，是骑自行车来的。最近运动量不够，胖了6斤啊。”
+        “嗯，是骑自行车来的。因为天气太舒适了！”
+        
+        分享经历：以“自身经历”回应对方，较容易让人敞开心扉。例如：
+        A：“天气预报说午后可能有雷阵雨，我带了折叠伞出来。”
+        B：“说到雨伞，我觉得还是折叠伞比较好。我前几天带长伞出门，结果丢在电车里。”
+        
+        利用“5W1H”：就算对方不善言辞，利用“5W1H”引出话题。
+        ·Who（谁）·What（什么）·When（何时）·Where（在哪儿）·Why（为何）·How（如何）
+        例如：
+        “上回遭小偷了……”
+        “啊！遭小偷了？什么时候？”（When）
+        “上礼拜天。”
+        “被偷了什么？”（What）
+        “我的包包被偷了，里面有钱包，还有记事本。”
+
+        聆听抱怨：听别人抱怨时不否定、不批判、不袒护对方所抱怨的对象。例如：
+        回几句“嗯嗯”，听过就算。
+""",
+    "日常-通用": """
+        坦率自我：坦率地说出自己的个性和特点，能让对方感到轻松，减少防备。例如：
+        “虽然我看起来豪放不羁，但其实胆子很小，见到人多就紧张。”
+        
+        自我标签：给自己贴上具体的标签，方便对方记住你。例如：
+        “我每天早上会喝1升的巴西莓果汁。”
+        
+        简化专业术语：聊工作时，用简单易懂的语言，不要卖弄专业术语。例如：
+        “SEO是指搜索引擎优化。”
+        
+        直言缺点：坦率地承认自己的缺点，能让对方对你更有好感。例如：
+        “我没什么嗜好，所以无聊时喝点啤酒。”
+        
+        提供有用信息：提供对方可用的信息，让对方觉得跟你聊天有收获。例如：
+        “上××网站可以找到既便宜又高级的旅馆。”
+""",
+    "日常-融入群体": """
+        说故事：把聊天当成讲故事，有画面更吸引人。例如：
+        “老板为了做出当年他在法国吃到的那种感动滋味，耗时五年才研制出这种极品甜点。”
+        
+        夸张比喻：锻炼幽默感，使用夸张比喻。例如：
+        “我的心情就像是被强迫去听哆啦A梦里的胖虎演唱会一样。”
+        
+        肯定叙述法：用肯定的方式表达意见，提升好感度。例如：
+        “是不是再另外想其他办法？相信一定会有好结果的！”
+        
+        糗事经验：主动分享自己的糗事，让人感到亲近。例如：
+        “昨天搭末班电车睡过头了，结果这趟旅行的目的地还是自己的家，真的是一点都不浪漫……”
+        
+        为对方着想：说话前先为对方设想，提升自己的魅力。例如：
+        “你没事吧？”“身体怎么了？”“你已经尽力了。”
+        
+        分享梦想：常跟人们说你的梦想，能引发共鸣和支持。例如：
+        “三年内我想去纽约开间画廊，上课就是为去纽约做准备。”
+""",
+    "日常-炒热气氛": """
+        “假设问题”能套出“真心话”
+        提出假设性问题，如“如果你中了彩票，你会怎么用这笔钱？”能让对方分享更深层次的想法，了解他们的价值观。
+        
+        “没答案的问题”，活络现场气氛最好用
+        提出没有标准答案的问题，例如“怎样让富士山移动”，能引发大家的兴趣，带动聊天气氛。
+        
+        “封闭+开放”的询问，怎么聊都有话讲
+        先用封闭式问题确认对方兴趣，再用开放式问题深入对话。例如：“喜欢甜的东西吗？”然后问：“那最近有好吃的甜点吗？”
+        
+        适时帮对方“整理对话”，聊多久都不累
+        当对方说话混乱时，帮他整理重点，例如：“嗯，所以你现在做的这份工作与乐器有关？”这样能帮助对方继续讲下去。
+    
+        使用转向语如“那么”“说到这个”，能自然地改变话题，避免让对方觉得被打断。
+    
+        利用对方话中的关键词，自然地转移到新的话题。例如：“说到晚餐时喝酒，××你好像很能喝日本酒？”
+
+        聊能让对方感到喜欢、快乐、幸福的事物。例如，问新婚夫妻他们初识的情景，对方自然会滔滔不绝地说。例子：
+        A：“你真是个工作狂。”
+        B：“编辑杂志非常有趣，我从未厌倦过。”
+        A：“你到底为什么会想当杂志编辑呢？”
+        B：“大学时朋友找我进来这行，后来发现自己很有才华。”
+
+        男人喜欢能力被认可，女人喜欢被爱。例如，男性：“你真是个值得托付的人。”女性：“谢谢，有你真好。”
+""",
+    "日常-发问": """
+        想要获得有用的资讯，可以刺激对方的“贡献心”。说明你的具体需求和目的，会让对方更愿意提供帮助。例子：
+        问：“银座有哪家意大利餐厅不错？”改为：“我三年没见到我妈了，她下周来看我，我想带她去吃她喜欢的意大利面，银座有哪家意大利餐厅不错？”
+        
+        提问时尽量范围小且具体，这样对方更容易给出实用的答案。例子：
+        问：“怎样做才能受欢迎？”改为：“当看到女孩子两手提着很重的东西，这时该对她说什么呢？”
+
+        当你不明白某个话题时，不要装懂，坦白表示不懂会让对方更愿意解释。例子：
+        对方提到“Offside”，你说：“啊？Offside？那是什么意思？”
+        
+        对于对方提供的信息，及时回应和表示感谢，能让对方更愿意继续提供帮助。例子：
+        “我昨天有去你说的那家按摩店，托你的福，酸痛和压力都消除了，还好问了你！”
+""",
 }
 
 
@@ -119,99 +485,19 @@ def parse_rag(text):
 
 
 class EQmaster:
-    def __init__(self,
-                 username = None,
-                 userid = -1,
-                 stories = None,
-                 story_vecs = None,
-                 llm = None, # 默认的message2response的函数
-                 llm_async = None, # 默认的message2response的async函数
-                 user_name_in_message = "default",
-                 verbose = None,
-                 embed_name = None,
-                 embedding = None,
-                 db = None,
-                 token_counter = "default",
-                 max_input_token = 1800,
-                 max_len_story = 600,
-                 max_story_n = 3,
-                 ):
-        """
-        回复建议：
-        分析对话场景和双方关系，询问回复倾向
-        调取相关数据（该场景下高情商回复的注意点）
-        给出高情商回复
-
-        判断是否已有回复倾向和相关数据，以此决定调用哪个agent
-        
-        游戏：
-        角色设定、场景设定、回复倾向
-        开场白
-        求助（调用回复建议接口）
-        评分（给定对话场景和双方关系，回复倾向，高情商回复注意点等数据，打分)
-        """
+    def __init__(self, username=None, llm=None, llm_async=None, verbose=None):
         self.verbose = True if verbose is None or verbose else False
-        self.db = db
-        # ================================================
-        self.userid = userid
-
-        self.stories = stories
-        self.story_vecs = story_vecs
-
-        self.rag_memories = ""
-
         self.scene = ""
         self.analyse = ""
-        # ================================================
-        self.embed_name = embed_name
-        self.max_len_story = max_len_story
-        self.max_story_n = max_story_n
-
-        # 加入回忆rag
-        self.add_rag_prompt()
-        self.last_query_msg = None
-        if embedding is None:
-            self.embedding = self.set_embedding_with_name( embed_name )
-        if self.story_vecs and None in self.story_vecs:
-            self.update_stories()
-
-        if stories and story_vecs and len(stories) == len(story_vecs):
-            # 完全从外部设置，这个时候要求story_vecs和embedding的返回长度一致
-            self.username = username
-            self.build_db(self.stories, self.story_vecs)
-        elif stories:
-            # 从stories中提取story_vecs，重新用self.embedding进行embedding
-            story_vecs = self.extract_story_vecs(stories)
-            self.username = username
-            self.build_db(self.stories, self.story_vecs)
-        else:
-            # 这个时候也就是说没有任何的RAG
-            self.username = username
-            self.db = None
-        
+        self.message = []
+        self.chat_history = ""
+        self.username = username
         self.llm, self.llm_async = llm, llm_async
+        self.current_stage = 1  # 初始化状态为stage1
+        self.options = []  # 存储stage2的回复选项
         if not self.llm and self.verbose:
             print("warning, llm没有设置，仅get_message起作用，调用chat将回复idle message")
 
-        self.user_name_in_message = user_name_in_message
-        self.previous_user_pool = set([username]) if username else set()
-        self.current_user_name_in_message = user_name_in_message.lower() == "add"
-
-        self.idle_message = "idel message, you see this because self.llm has not been set."
-
-        if token_counter.lower() == "default":
-            # TODO change load from util
-            from .utils import tiktoken_counter
-            self.token_counter = tiktoken_counter
-        elif token_counter == None:
-            self.token_counter = lambda x: 0
-        else:
-            self.token_counter = token_counter
-            if self.verbose:
-                print("user set costomized token_counter")
-
-        self.max_input_token = max_input_token
-        self.history = []
 
 
     def get_response_stage1(self, chat_history):
@@ -223,28 +509,25 @@ class EQmaster:
 
 # 任务
 【目标】从一段对话内容中：
-1. 分析对话发生的场景，以及双方的意图。
-2. 分析双方的关系，如上下级、老师与学生等。
-3. 根据分析内容，给出场景定义，从以下几个选项中选择：“日常聊天”、“职场”
-4. 询问对方是否有回复倾向或期望的回复风格
+1. 分析对话发生的场景，给出场景定义，从以下几个选项中选择：“日常聊天”、“职场”
+2. 分析对话双方的意图，并询问对方的回复倾向
 
 # 上下文
 当前的几轮对话内容：
 {self.chat_history}
 
 ------------
-注意，你的输出应分为三个部分，每部分用空行隔开，下面是一个例子：
-    1. 对话场景分析：对方想要用户在周五加班，要求其在下周一早上给出结果汇报。
+注意，你的输出应分为两部分，每部分用空行隔开。下面是一个例子：
+    推测场景：职场
 
-    2. 双方关系推测：上下级关系，用户是下级，对方是上级
+    您希望如何回应?
+    1️⃣...
+    2️⃣...
+    3️⃣...
+    4️⃣自定义    
 
-    3. 推测场景：职场
-
-    请问您是否有....
 """
-        message = [{"role":"system","content":sys_prompt}]
-        
-        # 新一轮对话，清空历史聊天记录
+        message = [{"role": "system", "content": sys_prompt}]
         self.message = []
 
         if self.llm:
@@ -253,382 +536,152 @@ class EQmaster:
                 print("=====分析=====")
                 print(response)
                 print("==========")
-            self.scene = response.split("\n\n")[2].replace("3. 推测场景：", "").strip()
+            response_parts = response.split("\n\n")
+            if len(response_parts) >= 2:
+                self.scene = response_parts[1].replace("推测场景：", "").strip()
+            else:
+                self.scene = response_parts
+                print("Warning: response does not contain enough parts. Using default scene.")
             self.analyse = response
+
+            # 提取选项并存储到 self.options 中
+            self.options = response_parts[2].split('\n') if len(response_parts) > 2 else []
+
             return response
 
 
     def get_response_stage2(self, query, analyse=None):
-        temp = ""
-        if self.scene in scene_data.keys():
-            temp += "# 相似场景下，高情商回复的要点：\n" + scene_data[self.scene]
+        # 初始化self.options
+        self.options = []
+        if not self.chat_history:
+            sys_prompt = query
+        else:
+            # 获取对应数据
+            sys_prompt = f"""
+            # 角色
+            你是高情商对话助手，能根据不同的对话场景和用户的回复倾向，判断其需要哪些相关技巧的数据。
 
-        sys_prompt = f"""
-# 角色
-你是人际交往专家，能根据不同的对话场景，给出高情商回复的建议，并根据用户反馈实时调整内容，提供指导。
+            # 任务
+            【目标】从一段对话，初步的场景、双方关系分析，以及用户反馈的回复倾向与期望风格为依据，判断需要哪些高情商对话技巧。
+            你仅可从下方列表中进行选择，其中内容是不同技巧的简单分类，“通用”表示该技巧泛用性较强，可以根据对话场景直接选择，其余细分则需要你结合对话内容和用户回复倾向综合考虑后再选取，至少选取一个，无上限。
+                "职场-通用"
+                "职场-安排工作"
+                "职场-说服"
+                "日常-通用"
+                "日常-打开话题/延续对话"
+                "日常-展示同理心/引导话题"
+                "日常-融入群体"
+                "日常-炒热气氛"
+                "日常-发问"
 
-# 任务
-【目标】从一段对话，场景分析，双方关系分析，以及对应场景的高情商回复要点出发：
-1. 给出三条不同风格、不同角度的高情商回复建议。
-2. 分析每一条回复的优势，为什么这么回复。
+            # 上下文
+            当前的几轮对话内容：
+            {self.chat_history}
 
-# 上下文
-当前的几轮对话内容：
-{self.chat_history}
+            # 分析
+            {analyse}
 
-# 分析
-{analyse}
-
-# 用户回复的倾向与期望风格
-{query}
-
-{temp}
-------------
-注意，你的输出应分为三个部分，每部分用空行隔开，下面是一个例子：
-    1. **参考回复1：尊重需求、注重结果**：
-        - 收到，考虑到今天是周五，且周末我可能无法全力投入工作，能否将汇报时间推迟到周二上午？这样我可以确保汇报内容的质量和准确性。
-
-    2. **参考回复2：...**：
-        ...
-
-    3. **参考回复3：...**：
-        ...
+            # 用户回复的倾向与期望风格
+            {query}
+            ------------
+            注意，你只需要输出你认为该对话场景需要的技巧，每个一行，下方是一个例子：
+                "职场-通用"
+                "职场-说服"
 """
+            self.message = [{"role":"system","content":sys_prompt}]
+            keys = []
+            temp = ""
+            if self.llm:
+                response = self.llm(self.message)
+                if self.verbose:
+                    print("=====搜索相关数据=====")
+                    print(response)
+                    print("==========")
+                keys = [i.replace("\"", "").strip() for i in response.split("\n")]
+            for scene in keys:
+                if scene in scene_data.keys():
+                    temp += scene_data[scene] + "\n"
+
+            sys_prompt = f"""
+            # 角色
+            你是人际交往专家，能根据不同的对话场景，给出高情商回复的建议，并根据用户反馈实时调整内容，提供指导。
+
+            # 任务
+            【目标】从一段对话，场景分析，双方关系分析，以及对应场景的高情商回复要点出发：
+            1. 通常而言，你只需要给出1条满足用户回复倾向的高情商回复建议。
+            2. 若给出的回复建议对方较为满意，可在已经作此回复的基础上继续推进对话，给出对应的建议。
+            3. 若对方想了解该回复建议的技巧和优势，你需要依据"相似场景下，高情商回复的一些技巧与要点"中的技巧要点，进行回复。
+
+            # 上下文
+            当前的几轮对话内容：
+            {self.chat_history}
+
+            # 分析
+            {analyse}
+
+            # 用户回复的倾向与期望风格
+            {query}
+
+            # 相似场景下，高情商回复的一些技巧与要点：
+            {temp}
+            ------------
+            注意，你应该给出三个具体的回复内容，不要生成引号等多余内容，以下是一个例子：
+                1️⃣...
+                2️⃣...
+                3️⃣...
+            """
         self.message = [{"role":"system","content":sys_prompt}]
         if self.llm:
             response = self.llm(self.message)
             if self.verbose:
+                print("=====回复prompt=====")
+                print(sys_prompt)
+                print("==========")
                 print("=====回复=====")
                 print(response)
                 print("==========")
             self.message += [{"role":"assistant","content":response}]
-            return response
+            # 解析并保存回复到self.options
+            self.options = [re.sub(r"^\d+\️⃣", "", line).strip() for line in response.split("\n") if line.strip()]
+            
+            # 为用户提供选择提示
+            options_prompt = "请选择以下回复之一:\n"
+            for i, option in enumerate(self.options, 1):
+                options_prompt += f"{i}️⃣ {option.strip()}\n"
+            
+            return options_prompt
 
-
-    def get_response(self, chat_history=None, query=None):
-        if chat_history:
-            analyse = self.get_response_stage1(chat_history)
-            return analyse
-        if query and not self.message:
-            response = self.get_response_stage2(query, self.analyse)
-            return response
-        if query and self.message:
-            self.message += [{"role":"user","content":query}]
-            response = self.llm(self.message)
+    def get_response_stage3(self, user_choice):
+        # 确保选择有效，范围在1到3之间
+        if 1 <= user_choice <= 3:
+            response = self.options[user_choice - 1]  # 根据用户选择返回对应的回复
             if self.verbose:
-                print("=====调整后的回复=====")
+                print("=====重复的回复=====")
                 print(response)
                 print("==========")
             return response
-        return "出错，请稍后再试，或联系开发人员"
+        else:
+            return "无效的选择，请选择一个有效的数字（1，2或3）。"
 
-
-    def add_rag_prompt( self ):
-        rag_sentence = "{{RAG回忆|token<=" + str(self.max_len_story) + "|n<=" + str(self.max_story_n) + "}}"
-        self.rag_memories += rag_sentence
-
-    def set_embedding_with_name(self, embed_name):
-        if embed_name is None or embed_name == "bge_zh":
-            from .embeddings import get_bge_zh_embedding
-            self.embed_name = "bge_zh"
-            return get_bge_zh_embedding
-        elif embed_name == "foo":
-            from .embeddings import foo_embedding
-            return foo_embedding
-        elif embed_name == "bce":
-            from .embeddings import foo_bce
-            return foo_bce
-        elif embed_name == "openai" or embed_name == "luotuo_openai":
-            from .embeddings import foo_openai
-            return foo_openai
-
-    def set_new_user(self, user):
-        if len(self.previous_user_pool) > 0 and user not in self.previous_user_pool:
-            if self.user_name_in_message.lower() == "default":
-                if self.verbose:
-                    print(f'new user {user} included in conversation')
-                self.current_user_name_in_message = True
-        self.username = user
-        self.previous_user_pool.add(user)
-
-    def chat(self, user, text):
-        self.set_new_user(user)
-        message = self.get_message(user, text)
-        if self.llm:
-            response = self.llm(message)
-            self.append_message(response)
+    def get_response_eqmaster(self, chat_history=None, query=None):
+        if chat_history:
+            # 进入stage1：解析对话历史
+            analyse = self.get_response_stage1(chat_history)
+            self.current_stage = 2  # 设置状态为stage2
+            return analyse
+        elif query and self.current_stage == 2:
+            # 在stage2：根据用户的回复倾向生成高情商回复建议
+            response = self.get_response_stage2(query, self.analyse)
+            self.current_stage = 3  # 设置状态为stage3
             return response
-        return None
-
-    async def async_chat(self, user, text):
-        self.set_new_user(user)
-        message = self.get_message(user, text)
-        if self.llm_async:
-            response = await self.llm_async(message)
-            self.append_message(response)
-            return response
-
-
-    def update_stories(self):
-        """
-        TODO 未重写为EQmaster的RAG
-        """
-        conn = sqlite3.connect('./database/mydata.db')
-        cur = conn.cursor()
-        # 找出所有story_vec为空的数据，生成向量并更新进数据库
-        stories = cur.execute("SELECT story FROM memories WHERE story_vec IS NULL OR story_vec = ''").fetchall()
-        story_vecs = self.extract_story_vecs(stories)
-        for story, story_vec in zip(stories, story_vecs):
-            story = story[0].replace("\\n", "\n")
-            cur.execute("UPDATE memories SET story_vec = ? WHERE story = ?",
-                                    (str(story_vec), story))
-        conn.commit()
-        conn.close()
-
-        conn = sqlite3.connect('./database/mydata.db')
-        cur = conn.cursor()
-        stories = cur.execute("SELECT story, story_vec FROM memories WHERE roleid = ? and userid = ?", (self.roleid, self.userid)).fetchall()
-        if stories:
-            self.stories, self.story_vecs = zip(*stories)
-            self.story_vecs = [eval(i)[0] for i in self.story_vecs]
+        elif query and self.current_stage == 3:
+            # 在stage3：根据用户选择的具体回复序号返回相应的回复
+            try:
+                user_choice = int(query.strip())  # 用户直接回复数字
+                response = self.get_response_stage3(user_choice)
+                self.current_stage = 2  # 返回到stage2，允许新的选择
+                return response
+            except ValueError:
+                return "输入无效，请输入有效的数字以选择具体的回复。"
         else:
-            self.stories, self.story_vecs = None, None
-        conn.close()
-
-
-    def parse_rag_from_memories(self, memories, text = None, type=""):
-        #每个query_rag需要饱含
-        # "n" 需要几个story
-        # "max_token" 最多允许多少个token，如果-1则不限制
-        # "query" 需要查询的内容，如果等同于"default"则替换为text
-        # "lid" 需要替换的行，这里直接进行行替换，忽视行的其他内容
-
-        query_rags = parse_rag( memories )
-        if text is not None:
-            for rag in query_rags:
-                if rag['query'] == "default":
-                    rag['query'] = text
-
-        return query_rags, self.token_counter(memories)
-
-
-    def append_message( self, response , speaker = None ):
-        if self.last_query_msg is not None:
-            self.history.append(self.last_query_msg)
-            self.short_history.append(self.last_query_msg)
-            self.last_query_msg = None
-
-        if speaker is None:
-            # 如果role是none，则认为是本角色{{role}}输出的句子
-            self.history.append({"speaker":"{{role}}","content":response})
-            self.short_history.append({"speaker":"{{role}}","content":response})
-            # 叫speaker是为了和role进行区分
-        else:
-            self.history.append({"speaker":speaker,"content":response})
-            self.short_history.append({"speaker":speaker,"content":response})
-
-    def check_recompute_stories_token(self):
-        return len(self.db.metas) == len(self.db.stories)
-    
-    def recompute_stories_token(self):
-        self.db.metas = [self.token_counter(story) for story in self.db.stories]
-
-
-    def rag_retrieve( self, query, n, max_token, avoid_ids = [], type="" ):
-        # 返回一个rag_id的列表
-        query_vec = self.embedding(query)
-
-        temp_db = self.db
-        temp_db.clean_flag()
-        temp_db.disable_story_with_ids( avoid_ids )
-        
-        retrieved_ids = temp_db.search( query_vec, n )
-
-        if self.check_recompute_stories_token():
-            self.recompute_stories_token()
-
-        sum_token = 0
-        ans = []
-        for i in range(0, len(retrieved_ids)):
-            if temp_db.metas[retrieved_ids[i]] == {}:
-                continue
-            if i == 0:
-                sum_token += temp_db.metas[retrieved_ids[i]]
-                ans.append(retrieved_ids[i])
-                continue
-            else:
-                sum_token += temp_db.metas[retrieved_ids[i]]
-                if sum_token <= max_token:
-                    ans.append(retrieved_ids[i])
-                else:
-                    break
-
-        return ans
-
-
-    def rag_retrieve_all( self, query_rags, rest_limit,type="" ):
-        # 返回一个rag_ids的列表
-        retrieved_ids = []
-        rag_ids = []
-
-        for query_rag in query_rags:
-            query = query_rag['query']
-            n = query_rag['n']
-            max_token = rest_limit
-            if rest_limit > query_rag['max_token'] and query_rag['max_token'] > 0:
-                max_token = query_rag['max_token']
-            rag_id = self.rag_retrieve( query, n, max_token, avoid_ids = retrieved_ids, type=type )
-            rag_ids.append( rag_id )
-            retrieved_ids += rag_id
-
-        return rag_ids
-
-
-    def get_message(self, user, text):
-        query_token = self.token_counter(text)
-        
-        # 处理 RAG 对话数据
-        query_rags, persona_token = self.parse_rag_from_memories( self.rag_memories, text )
-        #每个query_rag需要饱含
-        # "n" 需要几个story
-        # "max_token" 最多允许多少个token，如果-1则不限制
-        # "query" 需要查询的内容，如果等同于"default"则替换为text
-        # "lid" 需要替换的行，这里直接进行行替换，忽视行的其他内容
-
-        rest_limit = self.max_input_token - persona_token - query_token
-
-        if self.verbose:
-            print(f"query_rags: {query_rags} rest_limit = { rest_limit }")
-
-        if self.db:
-            rag_ids = self.rag_retrieve_all( query_rags, rest_limit )
-            # 将rag_ids对应的回忆 替换到persona中
-            self.rag_memories = self.augment_rag( self.rag_memories, rag_ids, query_rags )
-        else:
-            self.rag_memories = ""
-
-        # 每3轮对话更新一次摘要和亲密度
-        if len(self.short_history) >= 10:
-            self.update_experience()
-            self.short_history = []
-
-        system_prompt = self.package_system_prompt( self.rolename, self.persona, self.rag_memories, text )
-
-        if self.verbose:
-            print("=======system_prompt=======")
-            print(system_prompt)
-            print("=======")
-
-        token_for_system = self.token_counter( system_prompt )
-
-        rest_limit = self.max_input_token - token_for_system - query_token
-
-        # TODO：补rag到的知识，加入system_prompt（生平知识库中rag相关信息，网络检索相关信息）
-        message = [{"role":"system","content":system_prompt}]
-
-        # message = self.append_history_under_limit( message, rest_limit )
-
-        # # TODO: 之后为了解决多人对话，这了content还会额外增加speaker: content这样的信息
-
-        # message.append({"role":"user","content":text})
-
-        self.last_query_msg = {"speaker":user,"content":text}
-
-        return message
-
-    def package_system_prompt(self, rolename, persona, rag_memories, message):
-        system_prompt = ""
-        return system_prompt
-
-
-    def augment_rag(self, rag_memories, rag_ids, query_rags):  
-        lines = rag_memories.split("\n")
-        
-        for rag_id, query_rag in zip(rag_ids, query_rags):
-            lid = query_rag['lid']
-            new_text = ""
-            for id in rag_id:
-                new_text += "###\n" + self.db.stories[id].strip() + "\n"
-            new_text = new_text.strip()
-            lines[lid] = new_text
-        return "\n".join(lines)
-
-
-    def extract_text_vec_from_datas(self, datas, column_name):
-        # 从datas中提取text和vec
-        # extract text and vec from huggingface dataset
-        # return texts, vecs
-        # from .utils import base64_to_float_array
-
-        texts = []
-        vecs = []
-        for data in datas:
-            if data[column_name] == 'system_prompt':
-                system_prompt = get_text_from_data( data )
-            elif data[column_name] == 'config':
-                pass
-            else:
-                vec = base64_to_float_array( data[column_name] )
-                text = get_text_from_data( data )
-                vecs.append( vec )
-                texts.append( text )
-        return texts, vecs, system_prompt
-
-    def extract_story_vecs(self, stories):
-        # 从stories中提取story_vecs
-
-        if self.verbose:
-            print(f"re-extract vector for {len(stories)} stories")
-        
-        story_vecs = []
-
-        from .embeddings import embedshortname2model_name
-        from .embeddings import device
-
-        if device.type != "cpu" and self.embed_name in embedshortname2model_name:
-            # model_name = "BAAI/bge-small-zh-v1.5"
-            model_name = embedshortname2model_name[self.embed_name]
-
-            from .utils import get_general_embeddings_safe
-            story_vecs = get_general_embeddings_safe( stories, model_name = model_name )
-            # 使用batch的方式进行embedding，非常快
-        else:
-            from tqdm import tqdm
-            for story in tqdm(stories):
-                story_vecs.append(self.embedding(story))
-
-        return story_vecs
-
-    def extract_story_vec(self, story):
-        # 从stories中提取story_vecs
-        stories = [story]
-
-        if self.verbose:
-            print(f"re-extract vector for {len(stories)} stories")
-        
-        story_vecs = []
-
-        from .embeddings import embedshortname2model_name
-        from .embeddings import device
-
-        if device.type != "cpu" and self.embed_name in embedshortname2model_name:
-            # model_name = "BAAI/bge-small-zh-v1.5"
-            model_name = embedshortname2model_name[self.embed_name]
-
-            from .utils import get_general_embeddings_safe
-            story_vecs = get_general_embeddings_safe( stories, model_name = model_name )
-            # 使用batch的方式进行embedding，非常快
-        else:
-            from tqdm import tqdm
-            for story in tqdm(stories):
-                story_vecs.append(self.embedding(story))
-
-        return story_vecs
-
-    def build_db(self, stories, story_vecs):
-        # db的构造函数
-        if self.db is None:
-            from .NaiveDB import NaiveDB
-            self.db = NaiveDB()
-        self.db.build_db(stories, story_vecs)
-
+            return "可以转发一段聊天记录给我试试哦~"

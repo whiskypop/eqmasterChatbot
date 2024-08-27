@@ -11,6 +11,7 @@ from wcferry import Wcf
 
 import re  
 import xml.etree.ElementTree as ET  
+import html 
   
 def extract_messages(xml_content):  
     # Parse the XML content  
@@ -37,6 +38,7 @@ def extract_messages(xml_content):
             messages.append((sourcename, datadesc))  
     return messages  
   
+
 def format_messages(messages):  
     formatted_messages = "我把聊天记录转发给你：\n"
     for name,content in messages:
@@ -116,6 +118,7 @@ class MainServer:
             \t========== NGCBot V2.1 ==========       
             """.replace(' ', ''))
 
+
     def processMsg(self, ):
         # 判断是否登录
         self.isLogin()
@@ -130,15 +133,43 @@ class MainServer:
                     user_nick_name = msg.sender
                     Thread(target=self.Rmh.mainHandle, args=(msg, user_nick_name)).start()
                 # 好友消息处理
-                elif '@chatroom' not in msg.roomid and 'gh_' not in msg.sender:
+                if '@chatroom' not in msg.roomid and 'gh_' not in msg.sender:
                     user_nick_name = msg.sender
                     isChatHistory = False
+
+                    # msg.content转码
+                    # def decode_msg_content(content):
+                    #    # 解码 HTML 实体
+                    #     content = html.unescape(content)
+                        
+                    #     # 使用正则表达式提取 dataitem 中的内容
+                    #     pattern = re.compile(r'<dataitem.*?>(.*?)</dataitem>', re.DOTALL)
+                    #     items = pattern.findall(content)
+                        
+                    #     decoded_items = []
+                    #     for item in items:
+                    #         # 提取 dataid 和 datadesc
+                    #         dataid_match = re.search(r'dataid="(.*?)"', item)
+                    #         datadesc_match = re.search(r'<datadesc>(.*?)</datadesc>', item)
+                            
+                    #         if dataid_match and datadesc_match:
+                    #             dataid = dataid_match.group(1)
+                    #             datadesc = datadesc_match.group(1)
+                    #             decoded_items.append(f"ID: {dataid}, 描述2: {datadesc}")
+                        
+                    #     return "\n".join(decoded_items)
+                    # msg.content = decode_msg_content(msg.content)
+                    print("after decode:", msg.content)
                     if '</datalist>' in msg.content:
+                        print("2")
                         user_nick_name = extract_user_nicknames(msg.content)[0]
-                        msg.content = get_forwarded_msg(msg.content) + f"\n我是这段对话记录中的{user_nick_name}"
+                        print(user_nick_name)
+                        msg.content = msg.content + f"\n我是这段对话记录中的{user_nick_name}"
                         msg.type = 1
                         isChatHistory = True
-                        # print(msg.content)
+                        print("=========转发信息内容=========")
+                        print(msg.content)
+                        print("==================")
                     Thread(target=self.Fmh.mainHandle, args=(msg,user_nick_name, isChatHistory)).start()
                 else:
                     pass

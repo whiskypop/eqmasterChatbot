@@ -337,36 +337,11 @@ class AiDialogue:
         """
         result = ''
 
-        # if user_nick_name not in self.user_history.keys():
-        #     self.user_history[user_nick_name] = [{"role": "system", "content": f'{self.systemAiRole}'}]
-        if user_nick_name not in self.Chatbots.keys():
-            self.Chatbots[user_nick_name] = create_chatbot(username=user_nick_name, rolename="筱落苏")
-
-        "有：用户名，消息内容"
-        "需要：用户名、角色名、用户ID、角色ID"
-        "TODO 不同用户聊天记录不同，初步放在群聊里"
-        "目前结构是 用户名角色名 数据库读取信息创建角色 开始聊天"
-        "不同用户调用不同的chatbot，用字典保存？"
-
-        for i in range(1, 5):
-            aiModule = self.aiPriority.get(i)
-            if aiModule == 'openAi':
-                # 接入角色扮演模块
-                ai_chatbot = self.Chatbots[user_nick_name]
-                result = ai_chatbot.chat(user = user_nick_name, text = content)
-
-                # print(f"{user_nick_name}的聊天记录")
-                # print(self.user_history[user_nick_name])
-                # result, self.user_history[user_nick_name] = self.getOpenAi(content, self.user_history[user_nick_name][:])
-                # print(self.user_history[user_nick_name])
-            if not result:
-                continue
-            else:
-                break
+        
         return result
 
 
-    def get_eqmaster_Ai(self, content, user_nick_name, isChatHistory):
+    def get_eqmaster_Ai(self, content, roomid, isChatHistory):
         """
         处理优先级
         :param content:
@@ -374,8 +349,10 @@ class AiDialogue:
         """
         result = ''
 
-        if user_nick_name not in self.Chatbots.keys():
-            self.Chatbots[user_nick_name] = create_eqmaster(username=user_nick_name)
+        if roomid not in self.Chatbots.keys():
+            print("新用户，创建用户bot...")
+            print("用户名：", roomid)
+            self.Chatbots[roomid] = create_eqmaster(username=roomid, verbose=True)
 
         for i in range(1, 5):
             aiModule = self.aiPriority.get(i)
@@ -385,11 +362,13 @@ class AiDialogue:
                 result = self.getSparkAi(content)
             if aiModule == 'openAi':
                 # 接入角色扮演模块
-                ai_chatbot = self.Chatbots[user_nick_name]
+                ai_chatbot = self.Chatbots[roomid]
                 if isChatHistory:
-                    result = ai_chatbot.get_response(chat_history=content)
+                    print("新对话记录，生成回复...")
+                    result = ai_chatbot.get_response_eqmaster(chat_history=content)
                 else:
-                    result = ai_chatbot.get_response(query=content)
+                    print("生成回复...")
+                    result = ai_chatbot.get_response_eqmaster(query=content)
 
                 # result, self.user_history[user_nick_name] = self.getOpenAi(content, self.user_history[user_nick_name][:])
             if aiModule == 'qianFan':
