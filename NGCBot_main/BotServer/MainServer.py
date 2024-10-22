@@ -191,23 +191,23 @@ class MainServer:
                         msg.type = 1
                         isChatHistory = True
                         # Assuming chat_content is your list of dictionaries                        
-                        chat_record = ChatCreate(
-                            personal_name=user_nick_name,
-                            name=contact_nick_name,
-                            chat_content=chat_content_json,
-                            tag="摸鱼达人",
-                            contact_relationship="subordinate"
-                        )
-                        print(chat_record)
+                        # chat_record = ChatCreate(
+                        #     personal_name=user_nick_name,
+                        #     name=contact_nick_name,
+                        #     chat_content=chat_content_json,
+                        #     tag="摸鱼达人",
+                        #     contact_relationship="subordinate"
+                        # )
+                        # print(chat_record)
 
-                        # 发送 API 请求
-                        api_url = "https://eqmaster.azurewebsites.net/create_subordinate_by_chat"
-                        response = requests.post(api_url, json=chat_record.dict())
+                        # # 发送 API 请求
+                        # api_url = "https://eqmaster.azurewebsites.net/create_subordinate_by_chat"
+                        # response = requests.post(api_url, json=chat_record.dict())
 
-                        if response.status_code == 200:
-                            print("聊天记录成功发送到API")
-                        else:
-                            print(f"发送失败，状态码: {response.status_code}, 响应内容: {response.text}")
+                        # if response.status_code == 200:
+                        #     print("聊天记录成功发送到API")
+                        # else:
+                        #     print(f"发送失败，状态码: {response.status_code}, 响应内容: {response.text}")
                     
                     # 启动好友消息处理线程
                     Thread(target=self.Fmh.mainHandle, args=(msg, user_nick_name, isChatHistory)).start()
