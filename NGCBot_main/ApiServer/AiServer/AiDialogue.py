@@ -341,7 +341,7 @@ class AiDialogue:
         return result
 
 
-    def get_eqmaster_Ai(self, content, roomid, isChatHistory):
+    def get_eqmaster_Ai(self, content, sender, roomid, isChatHistory):
         """
         处理优先级
         :param content:
@@ -365,7 +365,8 @@ class AiDialogue:
                 ai_chatbot = self.Chatbots[roomid]
                 if isChatHistory:
                     print("新对话记录，生成回复...")
-                    result = ai_chatbot.get_response_eqmaster(chat_history=content)
+                    print("sender is : ", sender)
+                    result = ai_chatbot.get_response_eqmaster(user_nick_name=sender, chat_history=content)
                 else:
                     print("生成回复...")
                     result = ai_chatbot.get_response_eqmaster(query=content)

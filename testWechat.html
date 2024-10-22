@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>打开微信并添加好友</title>
+  </head>
+  <body>
+    <h1>点击按钮打开微信并添加好友</h1>
+    
+    <!-- 按钮点击后调用 openWeChat 函数 -->
+    <button onclick="openWeChat()">打开微信并添加好友</button>
+    
+    <script>
+      function openWeChat() {
+        const wechatId = 'wxid_3cnxu4266mt012'; // 指定微信ID，替换为实际的微信ID
+        const url = `weixin://contacts/profile/${wechatId}`;
+        console.log(url);
+        // 尝试打开微信并跳转到指定联系人
+        window.location.href = url;
+      }
+    </script>
+  </body>
+</html>

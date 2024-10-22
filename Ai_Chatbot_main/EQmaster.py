@@ -2,6 +2,8 @@ import re
 from html import unescape
 import sqlite3
 from datetime import datetime
+
+
 from .utils import base64_to_float_array, base64_to_string
 import json
 
@@ -483,6 +485,33 @@ def parse_rag(text):
             ans.append({"n": max_n, "max_token": max_token, "query": "default", "lid": i})
     return ans
 
+def detect_language(text):
+    print("here is text:", text)
+    # if not isinstance(text, str):
+    #     # 处理 text 为 None 或非字符串的情况
+    #     text = str(text) if text is not None else ''
+    #  # 检查 text 是否为字符串，如果是则尝试将其解析为列表
+    if isinstance(text, str):
+        try:
+            text = json.loads(text)
+        except json.JSONDecodeError:
+            raise ValueError("Invalid format: text is a string but cannot be parsed as JSON.")
+    
+    # 确保 chat_history 是一个包含字典的列表
+    if not isinstance(text, list):
+        raise TypeError("Expected a list of dictionaries for text.")
+    
+    chinese_pattern = re.compile(r'[\u4e00-\u9fff]')
+    
+    for entry in text:
+        message = entry['message']
+        # 如果message包含中文字符，直接返回'zh'
+        if chinese_pattern.search(message):
+            return 'zh'
+    
+    # 如果所有message都没有中文字符，返回'en'
+    return 'en'
+
 
 class EQmaster:
     def __init__(self, username=None, llm=None, llm_async=None, verbose=None):
@@ -500,32 +529,34 @@ class EQmaster:
 
 
 
-    def get_response_stage1(self, chat_history):
+    def get_response_stage1(self, chat_history, user_nick_name):
         self.chat_history = chat_history
-        
         sys_prompt = f"""
 # 角色
-你是信息整理和情感分析专家，能从双方一段对话中分析对话发生的场景，并对双方的关系进行评估。
+你是信息整理和情感分析专家，擅长处理复杂的对话分析，尤其是职场中的人际关系。你能够基于对话内容推测双方的关系和意图，并根据对话背景进行情感和内容分析。
 
 # 任务
 【目标】从一段对话内容中：
-1. 分析对话发生的场景，给出场景定义，从以下几个选项中选择：“日常聊天”、“职场”
-2. 分析对话双方的意图，并询问对方的回复倾向
+1. 分析对话发生的场景，给出场景定义，从以下几个选项中选择：“日常聊天”、“职场”。
+2. 分析双方的关系，并给出简要描述，如：“同事”、“上级与下属”、“朋友”等。依据对话的语气和内容推断双方的互动模式。
+3. 对聊天内容进行情感和意图分析。特别关注对方的意图以及用户可能的情感反应。分析对话是否包含潜在的冲突、冒犯、合作、或信息交换。
+4. 根据上述分析，推测出用户可能的3个回复倾向，并给出建议。
 
 # 上下文
 当前的几轮对话内容：
 {self.chat_history}
-
+我是这段对话记录中的：
+{user_nick_name}
 ------------
-注意，你的输出应分为两部分，每部分用空行隔开。下面是一个例子：
+注意，你的输出应分为三部分，每部分用空行隔开。下面是一个例子：
     推测场景：职场
 
-    您希望如何回应?
+    双方关系分析：上级与下属。上级正在询问项目进展，语气较为正式，但其中有鼓励成分。
+
+    可能的回复倾向：
     1️⃣...
     2️⃣...
-    3️⃣...
-    4️⃣自定义    
-
+    3️⃣... 
 """
         message = [{"role": "system", "content": sys_prompt}]
         self.message = []
@@ -533,7 +564,7 @@ class EQmaster:
         if self.llm:
             response = self.llm(message)
             if self.verbose:
-                print("=====分析=====")
+                print("=====分析=====")     
                 print(response)
                 print("==========")
             response_parts = response.split("\n\n")
@@ -545,91 +576,101 @@ class EQmaster:
             self.analyse = response
 
             # 提取选项并存储到 self.options 中
-            self.options = response_parts[2].split('\n') if len(response_parts) > 2 else []
+            self.options = response_parts[3].split('\n') if len(response_parts) > 3 else []
 
             return response
-
-
-    def get_response_stage2(self, query, analyse=None):
+    
+    
+    def get_response_stage2(self, userPrefer=None, analyse=None, user_nick_name=None):
+         # 检测聊天记录的语言
+        language = detect_language(self.chat_history)
+        print("Language detected:", language)
         # 初始化self.options
         self.options = []
-        if not self.chat_history:
-            sys_prompt = query
-        else:
+        # if not self.chat_history:
+        #     sys_prompt = query
+        # else:
             # 获取对应数据
-            sys_prompt = f"""
-            # 角色
-            你是高情商对话助手，能根据不同的对话场景和用户的回复倾向，判断其需要哪些相关技巧的数据。
+        sys_prompt = f"""
+        # 角色
+        你是高情商对话助手，能根据不同的对话场景和用户的回复倾向，判断其需要哪些相关技巧的数据。
 
-            # 任务
-            【目标】从一段对话，初步的场景、双方关系分析，以及用户反馈的回复倾向与期望风格为依据，判断需要哪些高情商对话技巧。
-            你仅可从下方列表中进行选择，其中内容是不同技巧的简单分类，“通用”表示该技巧泛用性较强，可以根据对话场景直接选择，其余细分则需要你结合对话内容和用户回复倾向综合考虑后再选取，至少选取一个，无上限。
-                "职场-通用"
-                "职场-安排工作"
-                "职场-说服"
-                "日常-通用"
-                "日常-打开话题/延续对话"
-                "日常-展示同理心/引导话题"
-                "日常-融入群体"
-                "日常-炒热气氛"
-                "日常-发问"
+        # 任务
+        【目标】从一段对话，初步的场景、双方关系分析，以及用户反馈的回复倾向与期望风格为依据，判断需要哪些高情商对话技巧。
+        你仅可从下方列表中进行选择，其中内容是不同技巧的简单分类，“通用”表示该技巧泛用性较强，可以根据对话场景直接选择，其余细分则需要你结合对话内容和用户回复倾向综合考虑后再选取，至少选取一个，无上限。
+            "职场-通用"
+            "职场-安排工作"
+            "职场-说服"
+            "日常-通用"
+            "日常-打开话题/延续对话"
+            "日常-展示同理心/引导话题"
+            "日常-融入群体"
+            "日常-炒热气氛"
+            "日常-发问"
 
-            # 上下文
-            当前的几轮对话内容：
-            {self.chat_history}
+        # 上下文
+        当前的几轮对话内容：
+        {self.chat_history}
+        我是这段对话记录中的：
+        {user_nick_name}
+        
+        # 分析
+        {self.analyse}
 
-            # 分析
-            {analyse}
 
-            # 用户回复的倾向与期望风格
-            {query}
-            ------------
-            注意，你只需要输出你认为该对话场景需要的技巧，每个一行，下方是一个例子：
-                "职场-通用"
-                "职场-说服"
+        ------------
+        注意，你只需要输出你认为该对话场景需要的技巧，每个一行，下方是一个例子：
+            "职场-通用"
+            "职场-说服"
 """
-            self.message = [{"role":"system","content":sys_prompt}]
-            keys = []
-            temp = ""
-            if self.llm:
-                response = self.llm(self.message)
-                if self.verbose:
-                    print("=====搜索相关数据=====")
-                    print(response)
-                    print("==========")
-                keys = [i.replace("\"", "").strip() for i in response.split("\n")]
-            for scene in keys:
-                if scene in scene_data.keys():
-                    temp += scene_data[scene] + "\n"
+        
+        self.message = [{"role":"system","content":sys_prompt}]
+        keys = []
+        temp = ""
+        if self.llm:
+            response = self.llm(self.message)
+            if self.verbose:
+                print("=====搜索相关数据=====")
+                print(response)
+                print("==========")
+            keys = [i.replace("\"", "").strip() for i in response.split("\n")]
+        for scene in keys:
+            if scene in scene_data.keys():
+                temp += scene_data[scene] + "\n"
 
-            sys_prompt = f"""
-            # 角色
-            你是人际交往专家，能根据不同的对话场景，给出高情商回复的建议，并根据用户反馈实时调整内容，提供指导。
+        sys_prompt = f"""
+        # 角色
+        你是人际交往专家，精通人情世故，非常擅长帮助用户解决各种职场问题。能根据不同的对话场景，给出高情商回复的建议，并根据用户反馈实时调整内容，提供指导。
 
-            # 任务
-            【目标】从一段对话，场景分析，双方关系分析，以及对应场景的高情商回复要点出发：
-            1. 通常而言，你只需要给出1条满足用户回复倾向的高情商回复建议。
-            2. 若给出的回复建议对方较为满意，可在已经作此回复的基础上继续推进对话，给出对应的建议。
-            3. 若对方想了解该回复建议的技巧和优势，你需要依据"相似场景下，高情商回复的一些技巧与要点"中的技巧要点，进行回复。
+        # 任务
+        【目标】从一段对话，场景分析，双方关系分析，以及对应场景的高情商回复要点出发：
+        1. 通常而言，你需要给出3条满足以下所述的3种用户回复倾向，如果用户给出自定义倾向则根据用户自定义倾向给出3条回复，并模仿用户说话语气的高情商回复建议。
+        2. 若给出的回复建议对方较为满意，可在已经作此回复的基础上继续推进对话，给出对应的建议。
+        3. 回复的长短根据场景来决定，如果是较为严肃的工作场景，回复可以稍微长一点，如果是比较轻松的氛围，回复可以短一点。
 
-            # 上下文
-            当前的几轮对话内容：
-            {self.chat_history}
+        # 上下文
+        当前的几轮对话内容：
+        {self.chat_history}
+        我是这段对话记录中的：
+        {user_nick_name}
 
-            # 分析
-            {analyse}
+        # 分析
+        {analyse}
 
-            # 用户回复的倾向与期望风格
-            {query}
+        # 用户自定义倾向
+        {userPrefer if userPrefer else '无'}
 
-            # 相似场景下，高情商回复的一些技巧与要点：
-            {temp}
-            ------------
-            注意，你应该给出三个具体的回复内容，不要生成引号等多余内容，以下是一个例子：
-                1️⃣...
-                2️⃣...
-                3️⃣...
-            """
+        # 相似场景下，高情商回复的一些技巧与要点：
+        {temp}
+        ------------
+        注意，你只需要给出三个具体的回复内容，一定不要生成引号""这种多余内容，以下是一个例子，一个回复写一行，三条回复用换行区分开：
+            1️⃣...
+            2️⃣...
+            3️⃣...
+        """
+        # 如果语言是英文，添加一句“用英文回答”
+        if language == 'en':
+            sys_prompt += "\nPlease reply in English.\n"
         self.message = [{"role":"system","content":sys_prompt}]
         if self.llm:
             response = self.llm(self.message)
@@ -645,7 +686,11 @@ class EQmaster:
             self.options = [re.sub(r"^\d+\️⃣", "", line).strip() for line in response.split("\n") if line.strip()]
             
             # 为用户提供选择提示
-            options_prompt = "请选择以下回复之一:\n"
+            if language == 'zh':
+                options_prompt = "以下有几种回复参考，请问您倾向选择哪一种回复呢？当然也可以告诉我您有什么回复倾向哦~\n"
+            else:
+                options_prompt = "There are several possible replies, which one do you prefer? You can also tell me what kind of reply you prefer!\n"
+
             for i, option in enumerate(self.options, 1):
                 options_prompt += f"{i}️⃣ {option.strip()}\n"
             
@@ -662,26 +707,49 @@ class EQmaster:
             return response
         else:
             return "无效的选择，请选择一个有效的数字（1，2或3）。"
+        
+    def get_text_response(self, query):
+        sys_prompt = f"""
+            你是一个高情商回复助手，可以根据用户提出的问题给出高情商的回复建议。
+        """
+        self.message = [
+            {"role": "system", "content": sys_prompt},
+            {"role": "user", "content": query}
+        ]
+        
+        if self.llm:
+            response = self.llm(self.message)
+        return response
 
-    def get_response_eqmaster(self, chat_history=None, query=None):
+    def get_response_eqmaster(self, user_nick_name=None, chat_history=None, query=None):
+        from NGCBot_main.BotServer.MainServer import parse_chat_message
         if chat_history:
             # 进入stage1：解析对话历史
-            analyse = self.get_response_stage1(chat_history)
+            print("---------current stage is 1------------")
+            print(chat_history)
+            chat_history = parse_chat_message(chat_history)
+            # chat_history += f"\n我是这段对话记录中的{user_nick_name}"
+            analyse = self.get_response_stage1(chat_history, user_nick_name)
             self.current_stage = 2  # 设置状态为stage2
-            return analyse
-        elif query and self.current_stage == 2:
             # 在stage2：根据用户的回复倾向生成高情商回复建议
-            response = self.get_response_stage2(query, self.analyse)
+            print("current stage is 2")
+            response = self.get_response_stage2(analyse, user_nick_name)
             self.current_stage = 3  # 设置状态为stage3
             return response
-        elif query and self.current_stage == 3:
-            # 在stage3：根据用户选择的具体回复序号返回相应的回复
-            try:
-                user_choice = int(query.strip())  # 用户直接回复数字
+        elif query:
+            if query.isdigit():
+                # 用户输入的是数字，进入stage3
+                user_choice = int(query.strip())  # 用户直接选择倾向
                 response = self.get_response_stage3(user_choice)
-                self.current_stage = 2  # 返回到stage2，允许新的选择
-                return response
-            except ValueError:
-                return "输入无效，请输入有效的数字以选择具体的回复。"
-        else:
-            return "可以转发一段聊天记录给我试试哦~"
+            elif self.current_stage == 2:
+            # 如果当前状态是stage2，重新生成stage2的回复建议
+                print("current stage is 2, regenerating stage 2 response")
+                response = self.get_response_stage2(query, self.analyse, user_nick_name)
+            else:
+                print("query provided but not a valid stage")
+                response = self.get_text_response(query)
+                # return "可以转发一段聊天记录给我试试哦~"
+            return response
+        # else:
+        #     print("not a chat history")
+        #     return "可以转发一段聊天记录给我试试哦~"

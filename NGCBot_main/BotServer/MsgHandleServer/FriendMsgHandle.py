@@ -232,11 +232,10 @@ class FriendMsgHandle:
         :return:
         """
         print("请求eqmaster回复...")
-        aiMsg = self.Ad.get_eqmaster_Ai(content, roomid, isChatHistory)
+        aiMsg = self.Ad.get_eqmaster_Ai(content, sender, roomid, isChatHistory)
         if aiMsg:
             aiMsg_segment = aiMsg.split("\n\n")
             for i in aiMsg_segment:
-                i = i.strip()
                 if len(i) > 4:
                     self.wcf.send_text(i, receiver=sender)
                     time.sleep(3)
