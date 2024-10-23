@@ -328,3 +328,282 @@ WHISKYpop 🍭: 以前每个月都是你发给我们的啊</desc><fromscene>2</f
 [2024-10-22 12:47:56.380] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 422
 [2024-10-22 12:47:58.125] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 194
 [2024-10-22 12:47:58.127] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:29:58.941] [debug] [WCF] [log.cpp::33::InitLogger] InitLogger with debug level
+[2024-10-23 14:29:58.943] [info] [WCF] [spy.cpp::35::InitSpy] WeChat version: 3.9.10.27
+[2024-10-23 14:29:58.947] [info] [WCF] [rpc_server.cpp::1010::RunServer] CMD Server listening on tcp://0.0.0.0:10086
+[2024-10-23 14:29:58.950] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:29:58.950] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:29:58.951] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x10[Functions_FUNC_GET_SELF_WXID] length: 2
+[2024-10-23 14:29:58.951] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 23
+[2024-10-23 14:29:58.951] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x30[Functions_FUNC_ENABLE_RECV_TXT] length: 4
+[2024-10-23 14:29:58.989] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:29:58.990] [info] [WCF] [rpc_server.cpp::455::PushMessage] MSG Server listening on tcp://0.0.0.0:10087
+[2024-10-23 14:29:59.680] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:29:59.680] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:29:59.680] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x15[Functions_FUNC_GET_USER_INFO] length: 2
+[2024-10-23 14:29:59.680] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 96
+[2024-10-23 14:30:43.340] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: I’m facing a work life balance conflict .
+[2024-10-23 14:30:43.340] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 517
+[2024-10-23 14:30:49.129] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 360
+[2024-10-23 14:30:49.130] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:30:52.160] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 67
+[2024-10-23 14:30:52.162] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:30:55.202] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 207
+[2024-10-23 14:30:55.204] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:30:58.285] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 230
+[2024-10-23 14:30:58.287] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:31:01.349] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 200
+[2024-10-23 14:31:01.352] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:31:04.393] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 201
+[2024-10-23 14:31:04.394] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:31:07.430] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 202
+[2024-10-23 14:31:07.432] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:31:10.473] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 191
+[2024-10-23 14:31:10.475] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:40:59.990] [debug] [WCF] [log.cpp::33::InitLogger] InitLogger with debug level
+[2024-10-23 14:40:59.991] [info] [WCF] [spy.cpp::35::InitSpy] WeChat version: 3.9.10.27
+[2024-10-23 14:40:59.993] [info] [WCF] [rpc_server.cpp::1010::RunServer] CMD Server listening on tcp://0.0.0.0:10086
+[2024-10-23 14:40:59.998] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:40:59.998] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:01.001] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:01.001] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:02.011] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:02.011] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:03.020] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:03.020] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:04.025] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:04.026] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:05.038] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:05.038] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:06.049] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:06.049] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:07.056] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:07.056] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:08.060] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:08.060] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:09.071] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:09.071] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:10.087] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:10.087] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:11.092] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:11.092] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:12.106] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:12.106] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:13.118] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:13.118] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:14.130] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:14.130] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:15.138] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:15.138] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:16.140] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:16.140] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:17.149] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:17.149] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:18.162] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:18.162] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:19.172] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:19.173] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:20.180] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:20.180] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:21.191] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:21.191] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:22.201] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:22.201] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:23.215] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:23.215] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:24.218] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:24.218] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:25.227] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:25.227] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:26.238] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:26.239] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:27.248] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:27.248] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:28.253] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:28.253] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:29.261] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:29.261] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:30.272] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:30.272] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:31.279] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:31.279] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:32.290] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:32.290] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:33.300] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:33.301] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:34.315] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:34.315] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:35.319] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:35.319] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:36.321] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:36.321] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:37.333] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:37.333] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:38.347] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:38.347] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:39.359] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:39.359] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:40.365] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:40.365] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:41.373] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:41.374] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:42.378] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:42.379] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:43.384] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:43.385] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:44.391] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:44.391] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:45.404] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:45.404] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:46.416] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:46.416] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:47.429] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:47.430] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:47.430] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x10[Functions_FUNC_GET_SELF_WXID] length: 2
+[2024-10-23 14:41:47.430] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 23
+[2024-10-23 14:41:47.431] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x30[Functions_FUNC_ENABLE_RECV_TXT] length: 4
+[2024-10-23 14:41:47.503] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:47.503] [info] [WCF] [rpc_server.cpp::455::PushMessage] MSG Server listening on tcp://0.0.0.0:10087
+[2024-10-23 14:41:48.517] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:41:48.517] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:41:48.528] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x15[Functions_FUNC_GET_USER_INFO] length: 2
+[2024-10-23 14:41:48.528] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 85
+[2024-10-23 14:41:48.773] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: <?xml version="1.0"?>
+<msg>
+	<appmsg appid="" sdkver="0">
+		<title>WHISKYpop 🍭和从嘉不字煜的聊天记录</title>
+		<des>从嘉不字煜: Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it ri</des>
+		<type>19</type>
+		<url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+		<appattach>
+			<cdnthumbaeskey />
+			<aeskey></aeskey>
+		</appattach>
+		<recorditem><![CDATA[<recordinfo><info>从嘉不字煜: Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it ri</info><datalist count="7"><dataitem datatype="1" dataid="ea8cc2f8ea9eda764d4745dd0e4bd872"><srcMsgLocalid>144</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>5884864628658471119</fromnewmsgid><srcMsgCreateTime>1729665576</srcMsgCreateTime><datadesc>Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it right now?</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="d9747e834c662102bd657d1e9cfa4565"><srcMsgLocalid>145</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>7257529899472055138</fromnewmsgid><srcMsgCreateTime>1729665583</srcMsgCreateTime><datadesc>Hey, I’m on leave right now, and I made sure everything was in order before I left. Is there anyone else on the team who can handle this? I really need this time to recharge.</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/MBB5CH3gtQvhBE6sF30w4HeWvyZkCwBribCia2TxzXUswHCg4WhYozYD5Fkhbwn1rzVbwgW05qSotLI00JVdHmmBGiaarywry5icA5VMLE7yEGibJZa4392vzr54sbO0Qjahic/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="9712fff2590e4046c196d47a8b1dabea"><srcMsgLocalid>146</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>4973499755424123375</fromnewmsgid><srcMsgCreateTime>1729665586</srcMsgCreateTime><datadesc>I get that, but the client just dropped this on us and is being really difficult. Honestly, no one else knows the details as well as you do. I wouldn’t ask if it wasn’t serious.</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="fc24d1fe7d32df11bc2c3daed455dbd6"><srcMsgLocalid>147</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>2072349474495397241</fromnewmsgid><srcMsgCreateTime>1729665598</srcMsgCreateTime><datadesc>I understand the urgency, but it’s not fair to pull me back into work while I’m on my time off. I’ve planned this break for a while, and I was clear about my availability. Someone else should be able to step up.</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/MBB5CH3gtQvhBE6sF30w4HeWvyZkCwBribCia2TxzXUswHCg4WhYozYD5Fkhbwn1rzVbwgW05qSotLI00JVdHmmBGiaarywry5icA5VMLE7yEGibJZa4392vzr54sbO0Qjahic/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="6a29ca27a4e932c94d38aff354ba5422"><srcMsgLocalid>148</srcMsgLocalid><sourcetime>2024-10-23 14:40</sourcetime><fromnewmsgid>5295160953104258433</fromnewmsgid><srcMsgCreateTime>1729665601</srcMsgCreateTime><datadesc>I hear you, but this is really important. We can’t afford to mess this up—if the client isn’t happy, it’s going to reflect badly on the entire team. Can you just handle it quickly? It won’t take long.</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="5b9c415ab33424d61d8fbc905d210b9b"><srcMsgLocalid>149</srcMsgLocalid><sourcetime>2024-10-23 14:40</sourcetime><fromnewmsgid>8343317208328128394</fromnewmsgid><srcMsgCreateTime>1729665611</srcMsgCreateTime><datadesc>That’s easy for you to say when you’re not the one who’s supposed to be on leave. I’ve already put in extra time to make sure things were covered, and now this comes up. It’s really frustrating to have my vacation disrupted like this.</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/MBB5CH3gtQvhBE6sF30w4HeWvyZkCwBribCia2TxzXUswHCg4WhYozYD5Fkhbwn1rzVbwgW05qSotLI00JVdHmmBGiaarywry5icA5VMLE7yEGibJZa4392vzr54sbO0Qjahic/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="0f8af977a31a6c37a4dde954db68f4a3"><srcMsgLocalid>150</srcMsgLocalid><sourcetime>2024-10-23 14:40</sourcetime><fromnewmsgid>2430185036271925655</fromnewmsgid><srcMsgCreateTime>1729665614</srcMsgCreateTime><datadesc>Look, I didn’t create this situation. I wouldn’t be messaging you if I could handle it on my own. It’s not ideal, but we’re all part of the team, and sometimes we just need to make sacrifices. Can you please just help?</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem></datalist><desc>从嘉不字煜: Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it ri</desc><fromscene>3</fromscene></recordinfo>]]></recorditem>
+	</appmsg>
+	<fromusername>wxid_pkc3mdoj79aa22</fromusername>
+	<scene>0</scene>
+	<appinfo>
+		<version>1</version>
+		<appname />
+	</appinfo>
+	<commenturl />
+</msg>
+
+[2024-10-23 14:41:48.773] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 7607
+[2024-10-23 14:42:01.330] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 798
+[2024-10-23 14:42:01.331] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:44:41.181] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: 2
+[2024-10-23 14:44:41.182] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 415
+[2024-10-23 14:44:41.493] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 254
+[2024-10-23 14:44:41.495] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:45:30.622] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: <msg>
+	<appmsg appid="" sdkver="0">
+		<title>群聊的聊天记录</title>
+		<des>Lena: I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the US- there are millions of people with gu</des>
+		<type>19</type>
+		<url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+		<appattach>
+			<cdnthumbaeskey />
+			<aeskey />
+		</appattach>
+		<recorditem><![CDATA[<recordinfo>
+	<info>Lena: I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the US- there are millions of people with gu</info>
+	<isChatRoom>1</isChatRoom>
+	<datalist count="3">
+		<dataitem datatype="1" dataid="1797c4754872652666c8089b16029bae">
+			<messageuuid>4d42047dbc15ab128b3211cc9bd53c22_</messageuuid>
+			<srcMsgLocalid>1868</srcMsgLocalid>
+			<sourcetime>2024-9-25 16:06</sourcetime>
+			<fromnewmsgid>1545363679733264476</fromnewmsgid>
+			<srcMsgCreateTime>1727251569</srcMsgCreateTime>
+			<refermsgitem>
+				<content>The US election in November will be interesting- two angry men already tried to shoot Trump..</content>
+				<svrid>5215017789020742441</svrid>
+				<displayname>Helmut Peter Brodesser</displayname>
+				<type>1</type>
+				<referdesc>Helmut Peter Brodesser：The US election in November will be interesting- two angry men already tried to shoot Trump..</referdesc>
+			</refermsgitem>
+			<datadesc>I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+---------------
+「Helmut Peter Brodesser：The US election in November will be interesting- two angry men already tried to shoot Trump..」</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="6d9eead65c518d105dd4980dc5bce43c">
+			<srcMsgLocalid>1869</srcMsgLocalid>
+			<sourcetime>2024-9-25 16:13</sourcetime>
+			<fromnewmsgid>7986447214621440563</fromnewmsgid>
+			<srcMsgCreateTime>1727251986</srcMsgCreateTime>
+			<datadesc>If he was killed, it would’ve been dangerous for the US- there are millions of people with guns in the US and many are Trump supporters. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="d53aabf6647fad9df1660f3909a64dab">
+			<srcMsgLocalid>1870</srcMsgLocalid>
+			<sourcetime>2024-9-25 20:06</sourcetime>
+			<fromnewmsgid>347771257688774573</fromnewmsgid>
+			<srcMsgCreateTime>1727265965</srcMsgCreateTime>
+			<datadesc>The photo is from X (twitter) and some comments say it’s AI generated, but it looks real- and there are actually people who do carry guns into shops in 🇺🇸. Amazing what AI can do now. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+	</datalist>
+	<desc>Lena: I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the US- there are millions of people with gu</desc>
+	<fromscene>2</fromscene>
+</recordinfo>
+]]></recorditem>
+	</appmsg>
+	<fromusername>wxid_3cnxu4266mt012</fromusername>
+	<scene>0</scene>
+	<appinfo>
+		<version>1</version>
+		<appname />
+	</appinfo>
+	<commenturl />
+</msg>
+
+[2024-10-23 14:45:30.623] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 4846
+[2024-10-23 14:45:38.794] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 612
+[2024-10-23 14:45:38.797] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:45:57.849] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: 3
+[2024-10-23 14:45:57.849] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 415
+[2024-10-23 14:45:58.158] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 184
+[2024-10-23 14:45:58.160] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:46:18.532] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: <?xml version="1.0"?>
+<msg>
+	<appmsg appid="" sdkver="0">
+		<title>WHISKYpop 🍭的聊天记录</title>
+		<des>WHISKYpop 🍭: 凯哥 紫云弄了个互联网ai交流的群，目前定位是一个互联网技能共享和信息互换的群，建起来之后会定期举办一些活动（好友邀请制），你想进来嘛我拉你～[嘿哈]</des>
+		<type>19</type>
+		<url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+		<appattach>
+			<cdnthumbaeskey />
+			<aeskey />
+		</appattach>
+		<recorditem><![CDATA[<recordinfo><info>WHISKYpop 🍭: 凯哥 紫云弄了个互联网ai交流的群，目前定位是一个互联网技能共享和信息互换的群，建起来之后会定期举办一些活动（好友邀请制），你想进来嘛我拉你～[嘿哈]</info><datalist count="1"><dataitem datatype="1" dataid="e896dab3c82faaa50e695841ef3c7d86"><srcMsgLocalid>244</srcMsgLocalid><sourcetime>2024-10-14 22:24</sourcetime><fromnewmsgid>292455762842016632</fromnewmsgid><srcMsgCreateTime>1728915851</srcMsgCreateTime><datadesc>凯哥 紫云弄了个互联网ai交流的群，目前定位是一个互联网技能共享和信息互换的群，建起来之后会定期举办一些活动（好友邀请制），你想进来嘛我拉你～[嘿哈]</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/nzrPJFbKF6PMfO6ibh5kMxibL1OlLzTTtuAgs0a9qLISrO4X6C7Nq5Oz6cuN97Wq0tIFMXVgulreuQfChxQZdPxfxPRbb9KUticpXa2LLJVlyFU7HjiaaUhrXJUNGFSLIcTu/132</sourceheadurl></dataitem></datalist><desc>WHISKYpop 🍭: 凯哥 紫云弄了个互联网ai交流的群，目前定位是一个互联网技能共享和信息互换的群，建起来之后会定期举办一些活动（好友邀请制），你想进来嘛我拉你～[嘿哈]</desc><fromscene>2</fromscene></recordinfo>]]></recorditem>
+	</appmsg>
+	<fromusername>wxid_3cnxu4266mt012</fromusername>
+	<scene>0</scene>
+	<appinfo>
+		<version>1</version>
+		<appname></appname>
+	</appinfo>
+	<commenturl></commenturl>
+</msg>
+
+[2024-10-23 14:46:18.533] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 2829
+[2024-10-23 14:46:25.983] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 490
+[2024-10-23 14:46:25.985] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
