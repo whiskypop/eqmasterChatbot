@@ -607,3 +607,429 @@ Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the U
 [2024-10-23 14:46:18.533] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 2829
 [2024-10-23 14:46:25.983] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 490
 [2024-10-23 14:46:25.985] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:49:16.250] [debug] [WCF] [log.cpp::33::InitLogger] InitLogger with debug level
+[2024-10-23 14:49:16.251] [info] [WCF] [spy.cpp::35::InitSpy] WeChat version: 3.9.10.27
+[2024-10-23 14:49:16.253] [info] [WCF] [rpc_server.cpp::1010::RunServer] CMD Server listening on tcp://0.0.0.0:10086
+[2024-10-23 14:49:16.256] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:49:16.256] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:49:16.256] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x10[Functions_FUNC_GET_SELF_WXID] length: 2
+[2024-10-23 14:49:16.256] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 23
+[2024-10-23 14:49:16.257] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x30[Functions_FUNC_ENABLE_RECV_TXT] length: 4
+[2024-10-23 14:49:16.290] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:49:16.290] [info] [WCF] [rpc_server.cpp::455::PushMessage] MSG Server listening on tcp://0.0.0.0:10087
+[2024-10-23 14:49:17.049] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-23 14:49:17.049] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-23 14:49:17.067] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x15[Functions_FUNC_GET_USER_INFO] length: 2
+[2024-10-23 14:49:17.067] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 96
+[2024-10-23 14:49:22.779] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: <msg>
+	<appmsg appid="" sdkver="0">
+		<title>群聊的聊天记录</title>
+		<des>Helmut Peter Brodesser: Customers in a 🇺🇸 fast food shop[骷髅][撇嘴]
+刀刀: 哈哈哈，Cosplay吗
+Helmut Peter Brodesser: Probably not- the guns look real [囧]
+刀刀: 行为艺术</des>
+		<type>19</type>
+		<url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+		<appattach>
+			<cdnthumbaeskey />
+			<aeskey />
+		</appattach>
+		<recorditem><![CDATA[<recordinfo>
+	<info>Helmut Peter Brodesser: Customers in a 🇺🇸 fast food shop[骷髅][撇嘴]
+刀刀: 哈哈哈，Cosplay吗
+Helmut Peter Brodesser: Probably not- the guns look real [囧]
+刀刀: 行为艺术</info>
+	<isChatRoom>1</isChatRoom>
+	<datalist count="16">
+		<dataitem datatype="1" dataid="ddd046010f25f82f5236ef2c88eef1a2">
+			<srcMsgLocalid>1855</srcMsgLocalid>
+			<sourcetime>2024-9-25 14:37</sourcetime>
+			<fromnewmsgid>7134200243562048374</fromnewmsgid>
+			<srcMsgCreateTime>1727246269</srcMsgCreateTime>
+			<datadesc>Customers in a 🇺🇸 fast food shop[骷髅][撇嘴]</datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="4f1714b7ead1d140c0ed530be2ecdb99">
+			<srcMsgLocalid>1856</srcMsgLocalid>
+			<sourcetime>2024-9-25 14:39</sourcetime>
+			<fromnewmsgid>273478733322315372</fromnewmsgid>
+			<srcMsgCreateTime>1727246377</srcMsgCreateTime>
+			<datadesc>哈哈哈，Cosplay吗</datadesc>
+			<dataitemsource>
+				<hashusername>e9afa68f300556982a92b33c777ebe6df60d9382013657a6aa9d37d9df559595</hashusername>
+			</dataitemsource>
+			<sourcename>刀刀</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/FFd0pyOCjIGVFare788lQia8WbIz5Su3HBEfXh6YjwVIOmb6QJwZicFbysFaVVaKpF2sUhz6xXN6ZLiaiaZrofI7jPDB30DWYxYcpRb2HjaThag/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="c87dd8039e12b679be9330fd7b43b28b">
+			<srcMsgLocalid>1857</srcMsgLocalid>
+			<sourcetime>2024-9-25 14:42</sourcetime>
+			<fromnewmsgid>7628939581095663177</fromnewmsgid>
+			<srcMsgCreateTime>1727246522</srcMsgCreateTime>
+			<datadesc>Probably not- the guns look real [囧]</datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="ed5eabd7323355ca66ebee2f7d31bb4a">
+			<srcMsgLocalid>1858</srcMsgLocalid>
+			<sourcetime>2024-9-25 14:47</sourcetime>
+			<fromnewmsgid>5606358605687759148</fromnewmsgid>
+			<srcMsgCreateTime>1727246829</srcMsgCreateTime>
+			<datadesc>行为艺术</datadesc>
+			<dataitemsource>
+				<hashusername>e9afa68f300556982a92b33c777ebe6df60d9382013657a6aa9d37d9df559595</hashusername>
+			</dataitemsource>
+			<sourcename>刀刀</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/FFd0pyOCjIGVFare788lQia8WbIz5Su3HBEfXh6YjwVIOmb6QJwZicFbysFaVVaKpF2sUhz6xXN6ZLiaiaZrofI7jPDB30DWYxYcpRb2HjaThag/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="8adf67ea0defb346c5615577a71ca0b0">
+			<srcMsgLocalid>1859</srcMsgLocalid>
+			<sourcetime>2024-9-25 14:48</sourcetime>
+			<fromnewmsgid>7879348899587836035</fromnewmsgid>
+			<srcMsgCreateTime>1727246927</srcMsgCreateTime>
+			<datadesc>Perhaps- but the guns look like real weapons. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="9a2560c32dbabd180c4005209f2dbb2a">
+			<srcMsgLocalid>1860</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:20</sourcetime>
+			<fromnewmsgid>218648126088400656</fromnewmsgid>
+			<srcMsgCreateTime>1727248832</srcMsgCreateTime>
+			<datadesc>Wear in weapons is common in US.😄😄😄</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="009dffc60bdc45b8906a1502d65d1f3c">
+			<thumbsize>7380</thumbsize>
+			<messageuuid>447a7ce97e67832bb1298d56ac3b3328_</messageuuid>
+			<cdnthumburl>3052020100044b30490201000204973610f602030f525902041fdccdcb020467189c40042464303362633536642d333062612d346139352d383463322d3064636366393035313132330204019c20010201000400</cdnthumburl>
+			<srcMsgLocalid>1861</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:20</sourcetime>
+			<fromnewmsgid>2998348487868492838</fromnewmsgid>
+			<thumbfiletype>1</thumbfiletype>
+			<srcMsgCreateTime>1727248850</srcMsgCreateTime>
+			<refermsgitem>
+				<content>&lt;msg&gt;&lt;img hdlength="0" length="106163" aeskey="" encryver="1" md5="3fdec87791b27b61ae5078df48c1b2d9" originsourcemd5="" filekey="1197415162@chatroom_1854_1727246114" uploadcontinuecount="0" imgsourceurl="" hevc_mid_size="0" cdnbigimgurl="" cdnmidimgurl="" cdnthumburl="" cdnthumblength="7380" cdnthumbwidth="120" cdnthumbheight="120" cdnthumbaeskey=""&gt;&lt;/img&gt;&lt;appinfo&gt;&lt;appid&gt;&lt;/appid&gt;&lt;appname&gt;&lt;/appname&gt;&lt;version&gt;0&lt;/version&gt;&lt;isforceupdate&gt;1&lt;/isforceupdate&gt;&lt;mediatagname&gt;&lt;/mediatagname&gt;&lt;messageext&gt;&lt;/messageext&gt;&lt;messageaction&gt;&lt;/messageaction&gt;&lt;/appinfo&gt;&lt;/msg&gt;</content>
+				<svrid>7500644334373626990</svrid>
+				<displayname>Helmut Peter Brodesser</displayname>
+				<type>3</type>
+				<referdesc>Helmut Peter Brodesser：[图片]</referdesc>
+			</refermsgitem>
+			<datadesc>😃😅
+---------------
+「Helmut Peter Brodesser：[图片]」</datadesc>
+			<thumbfullmd5>c46aad6fe21d18ec63e4eed16acefbad</thumbfullmd5>
+			<cdnthumbkey>cf0452f80f1dafe996d2a8502e66559f</cdnthumbkey>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="bd5c4339d1815678211744661caa2e7b">
+			<srcMsgLocalid>1862</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:33</sourcetime>
+			<fromnewmsgid>668021274714317125</fromnewmsgid>
+			<srcMsgCreateTime>1727249603</srcMsgCreateTime>
+			<datadesc>Using them is common too[白眼]</datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="78720107931f32b23651a3d54f9d4ffb">
+			<messageuuid>aabacdd7db00f8afc5cb5c013911c75c_</messageuuid>
+			<srcMsgLocalid>1863</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:42</sourcetime>
+			<fromnewmsgid>3668347787415580682</fromnewmsgid>
+			<srcMsgCreateTime>1727250148</srcMsgCreateTime>
+			<refermsgitem>
+				<content>Using them is common too[白眼]</content>
+				<svrid>668021274714317125</svrid>
+				<displayname>Helmut Peter Brodesser</displayname>
+				<type>1</type>
+				<referdesc>Helmut Peter Brodesser：Using them is common too[白眼]</referdesc>
+			</refermsgitem>
+			<datadesc>Yes, that's true.🤣
+---------------
+「Helmut Peter Brodesser：Using them is common too[白眼]」</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="3bda0af41aebab0276d535cae0cf5e53">
+			<srcMsgLocalid>1864</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:47</sourcetime>
+			<fromnewmsgid>292245304221634061</fromnewmsgid>
+			<srcMsgCreateTime>1727250439</srcMsgCreateTime>
+			<datadesc>Ausie police have gun too, I feel there are bullets in their guns. But ordinary people are not allowed to have guns, which is much safer than America.👍</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="f5af757057f68fe36060212aee17d52b">
+			<srcMsgLocalid>1865</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:53</sourcetime>
+			<fromnewmsgid>6612707970859280676</fromnewmsgid>
+			<srcMsgCreateTime>1727250834</srcMsgCreateTime>
+			<datadesc>Yes, when someone in Australia goes crazy and tries to kill, knives are mostly used, which aren’t as dangerous as automatic guns, which can kill faster and from a distance. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="2914c8bc2a30b3491849ab4d438d591b">
+			<messageuuid>7414fb9b360e5c41bcd76b0238c28fa5_</messageuuid>
+			<srcMsgLocalid>1866</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:56</sourcetime>
+			<fromnewmsgid>4888792571286427665</fromnewmsgid>
+			<srcMsgCreateTime>1727251000</srcMsgCreateTime>
+			<refermsgitem>
+				<content>Yes, when someone in Australia goes crazy and tries to kill, knives are mostly used, which aren’t as dangerous as automatic guns, which can kill faster and from a distance. </content>
+				<svrid>6612707970859280676</svrid>
+				<displayname>Helmut Peter Brodesser</displayname>
+				<type>1</type>
+				<referdesc>Helmut Peter Brodesser：Yes, when someone in Australia goes crazy and tries to kill, knives are mostly used, which aren’t as dangerous as automatic guns, which can kill faster and from a distance. </referdesc>
+			</refermsgitem>
+			<datadesc>Yes， I agree. 
+---------------
+「Helmut Peter Brodesser：Yes, when someone in Australia goes crazy and tries to kill, knives are mostly used, which aren’t as dangerous as automatic guns, which can kill faster and from a distance. 」</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="01851e67390bf923a6c2fb6b4bbb3b48">
+			<srcMsgLocalid>1867</srcMsgLocalid>
+			<sourcetime>2024-9-25 15:57</sourcetime>
+			<fromnewmsgid>5215017789020742441</fromnewmsgid>
+			<srcMsgCreateTime>1727251024</srcMsgCreateTime>
+			<datadesc>The US election in November will be interesting- two angry men already tried to shoot Trump..</datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="f0cdee74b5acd18209af7f3bf920d81b">
+			<messageuuid>4d42047dbc15ab128b3211cc9bd53c22_</messageuuid>
+			<srcMsgLocalid>1868</srcMsgLocalid>
+			<sourcetime>2024-9-25 16:06</sourcetime>
+			<fromnewmsgid>1545363679733264476</fromnewmsgid>
+			<srcMsgCreateTime>1727251569</srcMsgCreateTime>
+			<refermsgitem>
+				<content>The US election in November will be interesting- two angry men already tried to shoot Trump..</content>
+				<svrid>5215017789020742441</svrid>
+				<displayname>Helmut Peter Brodesser</displayname>
+				<type>1</type>
+				<referdesc>Helmut Peter Brodesser：The US election in November will be interesting- two angry men already tried to shoot Trump..</referdesc>
+			</refermsgitem>
+			<datadesc>I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+---------------
+「Helmut Peter Brodesser：The US election in November will be interesting- two angry men already tried to shoot Trump..」</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="c7fca09f7c2a1e7f8cc9ebcf303f7d2b">
+			<srcMsgLocalid>1869</srcMsgLocalid>
+			<sourcetime>2024-9-25 16:13</sourcetime>
+			<fromnewmsgid>7986447214621440563</fromnewmsgid>
+			<srcMsgCreateTime>1727251986</srcMsgCreateTime>
+			<datadesc>If he was killed, it would’ve been dangerous for the US- there are millions of people with guns in the US and many are Trump supporters. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="bb833623391d1fdeec76757ea9fb49b6">
+			<srcMsgLocalid>1870</srcMsgLocalid>
+			<sourcetime>2024-9-25 20:06</sourcetime>
+			<fromnewmsgid>347771257688774573</fromnewmsgid>
+			<srcMsgCreateTime>1727265965</srcMsgCreateTime>
+			<datadesc>The photo is from X (twitter) and some comments say it’s AI generated, but it looks real- and there are actually people who do carry guns into shops in 🇺🇸. Amazing what AI can do now. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+	</datalist>
+	<desc>Helmut Peter Brodesser: Customers in a 🇺🇸 fast food shop[骷髅][撇嘴]
+刀刀: 哈哈哈，Cosplay吗
+Helmut Peter Brodesser: Probably not- the guns look real [囧]
+刀刀: 行为艺术</desc>
+	<fromscene>2</fromscene>
+</recordinfo>
+]]></recorditem>
+	</appmsg>
+	<fromusername>wxid_3cnxu4266mt012</fromusername>
+	<scene>0</scene>
+	<appinfo>
+		<version>1</version>
+		<appname />
+	</appinfo>
+	<commenturl />
+</msg>
+
+[2024-10-23 14:49:22.781] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 16712
+[2024-10-23 14:49:31.373] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 636
+[2024-10-23 14:49:31.375] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:02:31.095] [debug] [WCF] [log.cpp::33::InitLogger] InitLogger with debug level
+[2024-10-24 11:02:31.099] [info] [WCF] [spy.cpp::35::InitSpy] WeChat version: 3.9.10.27
+[2024-10-24 11:02:31.108] [info] [WCF] [rpc_server.cpp::1010::RunServer] CMD Server listening on tcp://0.0.0.0:10086
+[2024-10-24 11:02:31.114] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-24 11:02:31.114] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:02:31.115] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x10[Functions_FUNC_GET_SELF_WXID] length: 2
+[2024-10-24 11:02:31.115] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 23
+[2024-10-24 11:02:31.116] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x30[Functions_FUNC_ENABLE_RECV_TXT] length: 4
+[2024-10-24 11:02:31.170] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:02:31.171] [info] [WCF] [rpc_server.cpp::455::PushMessage] MSG Server listening on tcp://0.0.0.0:10087
+[2024-10-24 11:02:31.950] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-24 11:02:31.950] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:02:31.965] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x15[Functions_FUNC_GET_USER_INFO] length: 2
+[2024-10-24 11:02:31.965] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 96
+[2024-10-24 11:36:55.985] [debug] [WCF] [log.cpp::33::InitLogger] InitLogger with debug level
+[2024-10-24 11:36:55.986] [info] [WCF] [spy.cpp::35::InitSpy] WeChat version: 3.9.10.27
+[2024-10-24 11:36:55.989] [info] [WCF] [rpc_server.cpp::1010::RunServer] CMD Server listening on tcp://0.0.0.0:10086
+[2024-10-24 11:36:55.992] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-24 11:36:55.992] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:36:55.992] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x10[Functions_FUNC_GET_SELF_WXID] length: 2
+[2024-10-24 11:36:55.992] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 23
+[2024-10-24 11:36:55.993] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x30[Functions_FUNC_ENABLE_RECV_TXT] length: 4
+[2024-10-24 11:36:56.053] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:36:56.054] [info] [WCF] [rpc_server.cpp::455::PushMessage] MSG Server listening on tcp://0.0.0.0:10087
+[2024-10-24 11:36:56.747] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x01[Functions_FUNC_IS_LOGIN] length: 2
+[2024-10-24 11:36:56.747] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:36:56.748] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x15[Functions_FUNC_GET_USER_INFO] length: 2
+[2024-10-24 11:36:56.748] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 96
+[2024-10-24 11:37:01.925] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: <?xml version="1.0"?>
+<msg>
+	<appmsg appid="" sdkver="0">
+		<title>WHISKYpop 🍭和从嘉不字煜的聊天记录</title>
+		<des>从嘉不字煜: Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it ri</des>
+		<type>19</type>
+		<url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+		<appattach>
+			<cdnthumbaeskey />
+			<aeskey />
+		</appattach>
+		<recorditem><![CDATA[<recordinfo><info>从嘉不字煜: Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it ri</info><datalist count="7"><dataitem datatype="1" dataid="ea8cc2f8ea9eda764d4745dd0e4bd872"><srcMsgLocalid>144</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>5884864628658471119</fromnewmsgid><srcMsgCreateTime>1729665576</srcMsgCreateTime><datadesc>Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it right now?</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="d9747e834c662102bd657d1e9cfa4565"><srcMsgLocalid>145</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>7257529899472055138</fromnewmsgid><srcMsgCreateTime>1729665583</srcMsgCreateTime><datadesc>Hey, I’m on leave right now, and I made sure everything was in order before I left. Is there anyone else on the team who can handle this? I really need this time to recharge.</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/MBB5CH3gtQvhBE6sF30w4HeWvyZkCwBribCia2TxzXUswHCg4WhYozYD5Fkhbwn1rzVbwgW05qSotLI00JVdHmmBGiaarywry5icA5VMLE7yEGibJZa4392vzr54sbO0Qjahic/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="9712fff2590e4046c196d47a8b1dabea"><srcMsgLocalid>146</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>4973499755424123375</fromnewmsgid><srcMsgCreateTime>1729665586</srcMsgCreateTime><datadesc>I get that, but the client just dropped this on us and is being really difficult. Honestly, no one else knows the details as well as you do. I wouldn’t ask if it wasn’t serious.</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="fc24d1fe7d32df11bc2c3daed455dbd6"><srcMsgLocalid>147</srcMsgLocalid><sourcetime>2024-10-23 14:39</sourcetime><fromnewmsgid>2072349474495397241</fromnewmsgid><srcMsgCreateTime>1729665598</srcMsgCreateTime><datadesc>I understand the urgency, but it’s not fair to pull me back into work while I’m on my time off. I’ve planned this break for a while, and I was clear about my availability. Someone else should be able to step up.</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/MBB5CH3gtQvhBE6sF30w4HeWvyZkCwBribCia2TxzXUswHCg4WhYozYD5Fkhbwn1rzVbwgW05qSotLI00JVdHmmBGiaarywry5icA5VMLE7yEGibJZa4392vzr54sbO0Qjahic/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="6a29ca27a4e932c94d38aff354ba5422"><srcMsgLocalid>148</srcMsgLocalid><sourcetime>2024-10-23 14:40</sourcetime><fromnewmsgid>5295160953104258433</fromnewmsgid><srcMsgCreateTime>1729665601</srcMsgCreateTime><datadesc>I hear you, but this is really important. We can’t afford to mess this up—if the client isn’t happy, it’s going to reflect badly on the entire team. Can you just handle it quickly? It won’t take long.</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="5b9c415ab33424d61d8fbc905d210b9b"><srcMsgLocalid>149</srcMsgLocalid><sourcetime>2024-10-23 14:40</sourcetime><fromnewmsgid>8343317208328128394</fromnewmsgid><srcMsgCreateTime>1729665611</srcMsgCreateTime><datadesc>That’s easy for you to say when you’re not the one who’s supposed to be on leave. I’ve already put in extra time to make sure things were covered, and now this comes up. It’s really frustrating to have my vacation disrupted like this.</datadesc><dataitemsource><hashusername>71ed45edafecfc9d10c30ebfa895ad0bfce2197d66fee4d4116c3f82e8291ee2</hashusername></dataitemsource><sourcename>WHISKYpop 🍭</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/MBB5CH3gtQvhBE6sF30w4HeWvyZkCwBribCia2TxzXUswHCg4WhYozYD5Fkhbwn1rzVbwgW05qSotLI00JVdHmmBGiaarywry5icA5VMLE7yEGibJZa4392vzr54sbO0Qjahic/132</sourceheadurl></dataitem><dataitem datatype="1" dataid="0f8af977a31a6c37a4dde954db68f4a3"><srcMsgLocalid>150</srcMsgLocalid><sourcetime>2024-10-23 14:40</sourcetime><fromnewmsgid>2430185036271925655</fromnewmsgid><srcMsgCreateTime>1729665614</srcMsgCreateTime><datadesc>Look, I didn’t create this situation. I wouldn’t be messaging you if I could handle it on my own. It’s not ideal, but we’re all part of the team, and sometimes we just need to make sacrifices. Can you please just help?</datadesc><dataitemsource><hashusername>43664dd914a719615ca1df56a43dace10746488b13b86ee3e9430addc098f76d</hashusername></dataitemsource><sourcename>从嘉不字煜</sourcename><sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/PDiagI46Xia5F6MiayUUFm8QI19y6rrkX4phLod5lVoqIv4Vb7qhKL7wxN0CWdFSNyF3icUurCAuXDkXRvXNFoD6eA/132</sourceheadurl></dataitem></datalist><desc>从嘉不字煜: Hey, sorry to bother you, but we’ve got an urgent issue with the project you were working on. The client is demanding changes, and we need your help to fix this ASAP. Can you take care of it ri</desc><fromscene>2</fromscene></recordinfo>]]></recorditem>
+	</appmsg>
+	<fromusername>wxid_3cnxu4266mt012</fromusername>
+	<scene>0</scene>
+	<appinfo>
+		<version>1</version>
+		<appname></appname>
+	</appinfo>
+	<commenturl></commenturl>
+</msg>
+
+[2024-10-24 11:37:01.925] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 7667
+[2024-10-24 11:37:11.341] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 665
+[2024-10-24 11:37:11.345] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4
+[2024-10-24 11:38:41.016] [debug] [WCF] [rpc_server.cpp::479::PushMessage] Push msg: <msg>
+	<appmsg appid="" sdkver="0">
+		<title>群聊的聊天记录</title>
+		<des>Lena: I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the US- there are millions of people with gu</des>
+		<type>19</type>
+		<url>https://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/favorite_record__w_unsupport</url>
+		<appattach>
+			<cdnthumbaeskey />
+			<aeskey />
+		</appattach>
+		<recorditem><![CDATA[<recordinfo>
+	<info>Lena: I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the US- there are millions of people with gu</info>
+	<isChatRoom>1</isChatRoom>
+	<datalist count="3">
+		<dataitem datatype="1" dataid="1797c4754872652666c8089b16029bae">
+			<messageuuid>4d42047dbc15ab128b3211cc9bd53c22_</messageuuid>
+			<srcMsgLocalid>1868</srcMsgLocalid>
+			<sourcetime>2024-9-25 16:06</sourcetime>
+			<fromnewmsgid>1545363679733264476</fromnewmsgid>
+			<srcMsgCreateTime>1727251569</srcMsgCreateTime>
+			<refermsgitem>
+				<content>The US election in November will be interesting- two angry men already tried to shoot Trump..</content>
+				<svrid>5215017789020742441</svrid>
+				<displayname>Helmut Peter Brodesser</displayname>
+				<type>1</type>
+				<referdesc>Helmut Peter Brodesser：The US election in November will be interesting- two angry men already tried to shoot Trump..</referdesc>
+			</refermsgitem>
+			<datadesc>I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+---------------
+「Helmut Peter Brodesser：The US election in November will be interesting- two angry men already tried to shoot Trump..」</datadesc>
+			<dataitemsource>
+				<hashusername>858e1c098292554c4975ee9e5f94a3f0c3cc1264169f8e2710f0f71ecb06209b</hashusername>
+			</dataitemsource>
+			<sourcename>Lena</sourcename>
+			<sourceheadurl>https://wx.qlogo.cn/mmhead/ver_1/G3q3kytGcWbwEic2BWUuHmxzFhz5f1lxhRduLoQ1HWk1Ks72JyBDhbRDnLBDrfSUBS4b3Fiak3mWk3XbnceOcuutvJoynHCfVBTZFHecogD1dzc0k5icRU98ibq5HVHhwSdkD0pibMdZuBR2lx3WzadFkSw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="6d9eead65c518d105dd4980dc5bce43c">
+			<srcMsgLocalid>1869</srcMsgLocalid>
+			<sourcetime>2024-9-25 16:13</sourcetime>
+			<fromnewmsgid>7986447214621440563</fromnewmsgid>
+			<srcMsgCreateTime>1727251986</srcMsgCreateTime>
+			<datadesc>If he was killed, it would’ve been dangerous for the US- there are millions of people with guns in the US and many are Trump supporters. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+		<dataitem datatype="1" dataid="d53aabf6647fad9df1660f3909a64dab">
+			<srcMsgLocalid>1870</srcMsgLocalid>
+			<sourcetime>2024-9-25 20:06</sourcetime>
+			<fromnewmsgid>347771257688774573</fromnewmsgid>
+			<srcMsgCreateTime>1727265965</srcMsgCreateTime>
+			<datadesc>The photo is from X (twitter) and some comments say it’s AI generated, but it looks real- and there are actually people who do carry guns into shops in 🇺🇸. Amazing what AI can do now. </datadesc>
+			<dataitemsource>
+				<hashusername>92960b2069b21db86e26d87c7c2b525ff32a3aad47934dfdef9affae07f74955</hashusername>
+			</dataitemsource>
+			<sourcename>Helmut Peter Brodesser</sourcename>
+			<sourceheadurl>https://mmhead.c2c.wechat.com/mmhead/EDJ4cwxeI4SSR3hC10ic65WiayOwvbbACjyyibOqcgiak9fYqNibqMajLFw/132</sourceheadurl>
+		</dataitem>
+	</datalist>
+	<desc>Lena: I heard that. Trump was shot twice, but luckily he escaped serious injury.😁
+Helmut Peter Brodesser: If he was killed, it would’ve been dangerous for the US- there are millions of people with gu</desc>
+	<fromscene>2</fromscene>
+</recordinfo>
+]]></recorditem>
+	</appmsg>
+	<fromusername>wxid_3cnxu4266mt012</fromusername>
+	<scene>0</scene>
+	<appinfo>
+		<version>1</version>
+		<appname />
+	</appinfo>
+	<commenturl />
+</msg>
+
+[2024-10-24 11:38:41.017] [debug] [WCF] [rpc_server.cpp::490::PushMessage] Send data length 4846
+[2024-10-24 11:38:50.949] [debug] [WCF] [rpc_server.cpp::854::dispatcher] 0x20[Functions_FUNC_SEND_TXT] length: 752
+[2024-10-24 11:38:50.951] [debug] [WCF] [rpc_server.cpp::1027::RunServer] Send data length 4

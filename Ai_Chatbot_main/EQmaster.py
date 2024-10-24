@@ -233,6 +233,8 @@ scene_data = {
             "I’m [Name] from [Company]."
             "I’m calling regarding next week’s lunch meeting."
             "Can I take up five minutes of your time?"
+
+            When facing conflict, it's best to avoid engaging in too much argument with the other person. Ideally, don’t give them the opportunity to counter your points. Ending the conversation quickly is more important.
 """,
     "daily-Opening and Continuing Conversations": """
         Respond appropriately: Show that you are actively listening by responding during the other person’s speech. For example:
